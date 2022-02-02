@@ -1,0 +1,9 @@
+[book]
+authors = ["Yuchuan Huang"]
+language = "en"
+multilingual = false
+src = "src"
+title = "CSCI 4707 lab-book"
+
+[output.html]
+git-repository-url = "https://github.com/csci4707-umn/lab-book"
