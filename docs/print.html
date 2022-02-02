@@ -381,6 +381,9 @@ WHERE name = 'Ross';
 -- 3. Who are the students with ID less than 3
 select sid from student where sid &lt; 3;
 </code></pre>
+<blockquote>
+<p>As you can tell from the last query, sql is case insensitive. However, it is always good to follow some style guides, for example this <a href="https://www.sqlstyle.guide/">guide</a>.</p>
+</blockquote>
 <p>Save the file and go back into <code>psql</code>. To run the script, use <code>\i $W$/script.sql</code>.</p>
 <pre><code>ProjectDB=# \i $W$/script.sql
 DROP TABLE
@@ -449,6 +452,7 @@ INSERT 0 1
  Sam
 (2 rows)
 </code></pre>
+<h3 id="use-online-sources"><a class="header" href="#use-online-sources">Use online sources</a></h3>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
 <p>Will keep updating as time goes on. Contributions are welcomed.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lab-1"><a class="header" href="#lab-1">Lab 1</a></h1>
@@ -586,7 +590,7 @@ MgrId: NUMERIC REFERENCES Employee(EmpId)<br />
 Do <strong>NOT</strong> post your project on a public Github repository.</p>
 </blockquote>
 <p><strong>Only one</strong> submission is needed for group work. Please include everyone’s name and ID in a <code>README.txt</code> file.</p>
-<p>The <code>README.txt</code> file should follow the following template, where ID is your <code>x.500</code> ID.</p>
+<p>The <code>README.txt</code> file should use the following template, where ID is your <code>x.500</code> ID.</p>
 <pre><code>Student 1
 Name:
 ID: 

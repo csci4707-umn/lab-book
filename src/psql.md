@@ -105,6 +105,8 @@ WHERE name = 'Ross';
 select sid from student where sid < 3;
 ```
 
+> As you can tell from the last query, sql is case insensitive. However, it is always good to follow some style guides, for example this [guide](https://www.sqlstyle.guide/).
+
 Save the file and go back into `psql`. To run the script, use `\i $W$/script.sql`.
 ```
 ProjectDB=# \i $W$/script.sql
@@ -179,3 +181,5 @@ INSERT 0 1
  Sam
 (2 rows)
 ```
+
+### Use online sources

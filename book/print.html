@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE UNIX machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> PART 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> PART 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> PART 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE UNIX machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -176,7 +176,7 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <p>We first download and install PostgreSQL, then we initialize a folder for PostgreSQL to keep data.</p>
 <h2 id="pre-request"><a class="header" href="#pre-request">Pre-request</a></h2>
 <ol>
-<li>You should be able to connect to any CSE UNIX/Linux machines.</li>
+<li>You should be able to connect to any CSE UNIX/Linux machines. See detail on this <a href="./machine.html">page</a></li>
 <li>PostgreSQL is a large software. You will want at least 200 MB of space in your machine. If not, learn how to free your space on this <a href="https://cse.umn.edu/cseit/self-help-guides/disk-quota-free-your-space">page</a>.</li>
 </ol>
 <h2 id="install-postgresql"><a class="header" href="#install-postgresql">Install PostgreSQL</a></h2>
@@ -381,6 +381,9 @@ WHERE name = 'Ross';
 -- 3. Who are the students with ID less than 3
 select sid from student where sid &lt; 3;
 </code></pre>
+<blockquote>
+<p>As you can tell from the last query, sql is case insensitive. However, it is always good to follow some style guides, for example this <a href="https://www.sqlstyle.guide/">guide</a>.</p>
+</blockquote>
 <p>Save the file and go back into <code>psql</code>. To run the script, use <code>\i $W$/script.sql</code>.</p>
 <pre><code>ProjectDB=# \i $W$/script.sql
 DROP TABLE
@@ -415,7 +418,42 @@ INSERT 0 1
 (2 rows)
 </code></pre>
 <p><code>.sql</code> file can also be passed as an argument to <code>psql</code>, so you can run a <code>.sql</code> file without going into <code>psql</code>. Copy and run following command in your terminal. </p>
-<pre><code>bin/psql ProjectDB -f $W$/script.sql</code></pre><div style="break-before: page; page-break-before: always;"></div><h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
+<pre><code>bin/psql ProjectDB -f $W$/script.sql</code></pre>
+<p>You should see the following output. </p>
+<pre><code>$ bin/psql ProjectDB -f $W$/script.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ sid | name
+-----+-------
+   1 | John
+   2 | Sam
+   3 | Mark
+   4 | Ted
+   5 | Ross
+   6 | James
+   7 | Tom
+(7 rows)
+
+ sid
+-----
+   5
+(1 row)
+
+ name
+------
+ John
+ Sam
+(2 rows)
+</code></pre>
+<h3 id="use-online-sources"><a class="header" href="#use-online-sources">Use online sources</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
 <p>Will keep updating as time goes on. Contributions are welcomed.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lab-1"><a class="header" href="#lab-1">Lab 1</a></h1>
 <blockquote>
@@ -437,7 +475,7 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <li>Part 2: 60 points</li>
 <li>Part 3: 20 points</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="part-1-projectdb-schema-creation"><a class="header" href="#part-1-projectdb-schema-creation">PART 1: ProjectDB Schema Creation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-1-projectdb-schema-creation"><a class="header" href="#part-1-projectdb-schema-creation">Part 1: ProjectDB Schema Creation</a></h1>
 <p>ProjectDB consists of the following relations defined in the following schemas. Please create tables for them in PostgreSQL.</p>
 <blockquote>
 <p>University (<br />
@@ -488,11 +526,14 @@ MgrId: NUMERIC REFERENCES Employee(EmpId)<br />
 <p>The submission of your work is a file named <code>p1.sql</code>, that contains all SQL queries to create the above relations.</p>
 <h2 id="grading-criteria"><a class="header" href="#grading-criteria">Grading Criteria:</a></h2>
 <ul>
-<li>Total: 20 points</li>
+<li>Total: 20 points
+<ul>
 <li>10 Points: The provided script is able to create all the above relations with the correct schema.</li>
 <li>10 Points: The provided script handles the FOREIGN KEY constraint perfectly.</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="part-2-sql-queries"><a class="header" href="#part-2-sql-queries">PART 2: SQL Queries</a></h1>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-2-sql-queries"><a class="header" href="#part-2-sql-queries">Part 2: SQL Queries</a></h1>
 <p>Once you have created the above schema, run the <code>data.sql</code> file to load the data into the database.</p>
 <pre><code>\i &#60;path-to-data.sql&#62;</code></pre>
 <p>Then, write SQL queries that answer the questions below (one SQL query per question but you are allowed to use nested queries). The query answers should be duplicate-free, but you should use distinct only when necessary.</p>
@@ -522,7 +563,7 @@ MgrId: NUMERIC REFERENCES Employee(EmpId)<br />
 <ul>
 <li>10 Points (no partial credit) for each correct SQL query.</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="part-3-sql-updates-and-deletes"><a class="header" href="#part-3-sql-updates-and-deletes">PART 3: SQL Updates and Deletes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-3-sql-updates-and-deletes"><a class="header" href="#part-3-sql-updates-and-deletes">Part 3: SQL Updates and Deletes</a></h1>
 <ol>
 <li>
 <p>Employee with Id 2 has moved to an address in 55414. Please update this in the database and select that employee after the update to ensure that the corresponding tuple has been updated.</p>
@@ -549,7 +590,7 @@ MgrId: NUMERIC REFERENCES Employee(EmpId)<br />
 Do <strong>NOT</strong> post your project on a public Github repository.</p>
 </blockquote>
 <p><strong>Only one</strong> submission is needed for group work. Please include everyone’s name and ID in a <code>README.txt</code> file.</p>
-<p>The <code>README.txt</code> file should follow the following template, where ID is your <code>x.500</code> ID.</p>
+<p>The <code>README.txt</code> file should use the following template, where ID is your <code>x.500</code> ID.</p>
 <pre><code>Student 1
 Name:
 ID: 
@@ -562,7 +603,7 @@ Student 3
 Name:
 ID: 
 </code></pre>
-<p>Zip all four files (<code>p1.sql</code> <code>p2.sql</code> <code>p3.sql</code> and <code>README.txt</code>) into one zip file with the following command. You need to have all four files in the same directory and run the command in that directory. Remember to replace <code>&lt;x.500&gt;</code> with your <code>x.500</code> ID. This ID can be anyone's who submits the work for the group. </p>
+<p>Zip all four files (<code>p1.sql</code> <code>p2.sql</code> <code>p3.sql</code> and <code>README.txt</code>) into one zip file with the following command. You need to have all four files in the same directory and run the command in that directory. Remember to replace <code>&lt;x.500&gt;</code> with your <code>x.500</code> ID. This ID can be anyone who submits the work for the group. </p>
 <pre><code>zip &#60;x.500&#62;.zip README.txt p1.sql p2.sql p3.sql</code></pre>
 <p>This command generates a zip file named <code>&lt;x.500&gt;.zip</code>. Submit this file to Gradescope. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lab-2"><a class="header" href="#lab-2">Lab 2</a></h1>

@@ -5,7 +5,7 @@
 
 **Only one** submission is needed for group work. Please include everyone’s name and ID in a `README.txt` file.
 
-The `README.txt` file should follow the following template, where ID is your `x.500` ID.
+The `README.txt` file should use the following template, where ID is your `x.500` ID.
 
 ```
 Student 1
