@@ -1,6 +1,5 @@
 # Introduction
 
-> [!WARNING]
 > <i class="trigger fa fa-exclamation-triangle fa-lg"></i>
 > Do **NOT** post your project on a public Github repository.
 
