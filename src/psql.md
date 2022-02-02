@@ -182,4 +182,7 @@ INSERT 0 1
 (2 rows)
 ```
 
-### Use online sources
+### Use online resources
+You can find tons of tutorials, Q&As for SQL and PostgreSQL on Internet.
+
+- [Official PostgreSQL document](https://www.postgresql.org/docs/14/index.html)
