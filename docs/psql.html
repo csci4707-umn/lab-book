@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE UNIX machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html" class="active"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> PART 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> PART 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> PART 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE UNIX machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html" class="active"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> PART 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> PART 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> PART 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -146,7 +146,133 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="postgresql-101"><a class="header" href="#postgresql-101">PostgreSQL 101</a></h1>
+<p>You are supposed to learn how to use PostgreSQL on you own. Specific SQL grammar (dialect) is not the focus on this course. This tutorial only aims to help you start the labs. The code blocks on this page are aimed for examples, not for copy-and-run. </p>
+<h3 id="all-sql-in-postgresql-end-with-a-"><a class="header" href="#all-sql-in-postgresql-end-with-a-">All sql in PostgreSQL end with a &quot;;&quot;</a></h3>
+<p><code>psql</code> waits for a <code>;</code>, then it knows it is an end for the sql. To run an SQL, type your sql, end with a <code>;</code> then hit <code>Enter</code>.</p>
+<pre><code>ProjectDB=# CREATE TABLE student (sid integer, name text);
+CREATE TABLE
+ProjectDB=# DROP TABLE student;
+DROP TABLE
+</code></pre>
+<p>This means you can type sql in multiline in <code>psql</code>. Type your sql in multiline, end with a <code>;</code> then hit <code>Enter</code>. When you are in the first line of your sql, line starts with <code>=#</code>; when you are in brackets, line starts with <code>(#</code>, otherwise line starts with <code>-#</code>.</p>
+<pre><code>ProjectDB=# CREATE TABLE
+ProjectDB-# student
+ProjectDB-# (
+ProjectDB(# sid integer,
+ProjectDB(# name text
+ProjectDB(# )
+ProjectDB-# ;
+CREATE TABLE
+</code></pre>
+<h3 id="helpful-commands-in-psql"><a class="header" href="#helpful-commands-in-psql">Helpful commands in <code>psql</code></a></h3>
+<p>In addition to SQL, <code>psql</code> has many helpful commands.</p>
+<ol>
+<li>You must exit psql by typing <code>\q</code> and do not use <code>ctrl-c</code>.</li>
+</ol>
+<pre><code>ProjectDB=# \q
+</code></pre>
+<ol start="2">
+<li>To show relations you have created, use <code>\d</code></li>
+</ol>
+<pre><code>ProjectDB=# \d
+          List of relations
+ Schema |  Name   | Type  |  Owner
+--------+---------+-------+----------
+ public | student | table | huan1531
+(1 row)
+</code></pre>
+<ol start="3">
+<li>To show schema of a relation, use <code>\d &lt;relation-name&gt;</code></li>
+</ol>
+<pre><code>ProjectDB=# \d student
+              Table &quot;public.student&quot;
+ Column |  Type   | Collation | Nullable | Default
+--------+---------+-----------+----------+---------
+ sid    | integer |           |          |
+ name   | text    |           |          |
+</code></pre>
+<ol start="4">
+<li>To run an sql script located at <code>$W$/script.sql</code>, use <code>\i $W$/script.sql</code></li>
+</ol>
+<h3 id="an-example-sql-script"><a class="header" href="#an-example-sql-script">An example SQL script</a></h3>
+<p>Just like <code>.sh</code> file for shell, <code>.sql</code> file is an executable file for <code>psql</code>, containing one or more sql queries. </p>
+<p>Create a new file <code>script.sql</code> in <code>$W$</code>. Copy the following to the file. </p>
+<pre><code>/*
+ * script.sql
+ * A .sql script example
+ */
 
+-- Single line comment in .sql file starts with &quot;--&quot;
+
+/*
+ * Multiline comment is wrapped by &quot;/&quot; and &quot;*&quot;
+ */
+
+-- Drop table if exists
+DROP TABLE IF EXISTS student;
+
+-- Create table
+CREATE TABLE student (
+    sid integer,
+    name text
+);
+
+-- Insert value into table
+INSERT INTO student VALUES (1, 'John');
+INSERT INTO student VALUES (2, 'Sam');
+INSERT INTO student VALUES (3, 'Mark');
+INSERT INTO student VALUES (4, 'Ted');
+INSERT INTO student VALUES (5, 'Ross');
+INSERT INTO student VALUES (6, 'James');
+INSERT INTO student VALUES (7, 'Tom');
+
+-- Do some sample queries
+-- 1. Select all from table, '*' return all attributes
+SELECT * FROM student;
+
+-- 2. What is Ross's student ID
+SELECT sid
+FROM student
+WHERE name = 'Ross';
+
+-- 3. Who are the students with ID less than 3
+select sid from student where sid &lt; 3;
+</code></pre>
+<p>Save the file and go back into <code>psql</code>. To run the script, use <code>\i $W$/script.sql</code>.</p>
+<pre><code>ProjectDB=# \i $W$/script.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ sid | name
+-----+-------
+   1 | John
+   2 | Sam
+   3 | Mark
+   4 | Ted
+   5 | Ross
+   6 | James
+   7 | Tom
+(7 rows)
+
+ sid
+-----
+   5
+(1 row)
+
+ name
+------
+ John
+ Sam
+(2 rows)
+</code></pre>
+<p><code>.sql</code> file can also be passed as an argument to <code>psql</code>, so you can run a <code>.sql</code> file without going into <code>psql</code>. Copy and run following command in your terminal. </p>
+<pre><code>bin/psql ProjectDB -f $W$/script.sql</code></pre>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
@@ -155,7 +281,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="lab1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="troubleshooting.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -169,7 +295,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="lab1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="troubleshooting.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

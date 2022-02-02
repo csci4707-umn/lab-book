@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE UNIX machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html" class="active"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> PART 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> PART 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> PART 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE UNIX machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html" class="active"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> PART 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> PART 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> PART 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,7 +147,7 @@
                     <main>
                         <h1 id="run-postgresql"><a class="header" href="#run-postgresql">Run PostgreSQL</a></h1>
 <p>PostgreSQL takes a classic <em>server-client</em> architecture. Therefore, we need two terminal windows to start the server and client separately. Let's call them <code>Terminal S</code> (for server) and <code>Terminal C</code> (for client) respectively.</p>
-<h2 id="first-time-start-the-server-and-run-the-client"><a class="header" href="#first-time-start-the-server-and-run-the-client">First time start the server and run the client</a></h2>
+<h2 id="first-time-start-the-server-and-open-the-client"><a class="header" href="#first-time-start-the-server-and-open-the-client">First time start the server and open the client</a></h2>
 <h4 id="terminal-s"><a class="header" href="#terminal-s">Terminal S</a></h4>
 <ol>
 <li>Make sure you are in the installation folder<code>$W$/install</code>.</li>
@@ -161,7 +161,7 @@
 <img src="./figure/server.png" alt="server" />
 It will keep printing out logs in this terminal. We can use this terminal to get information on what is happening in our DBMS.</p>
 <h4 id="terminal-c"><a class="header" href="#terminal-c">Terminal C</a></h4>
-<p>To run the client, open another terminal and use the following command to create a database to use: (In this example, we call the database <code>ProjectDB</code>)</p>
+<p>To open the client, open another terminal and use the following command to create a database to use: (In this example, we call the database <code>ProjectDB</code>)</p>
 <ol>
 <li>Make sure you are in the installation folder<code>$W$/install</code>.</li>
 </ol>
@@ -172,7 +172,7 @@ It will keep printing out logs in this terminal. We can use this terminal to get
 <pre><code>bin/createdb ProjectDB</code></pre>
 <p>We interact with our DBMS by using a program called <code>psql</code>.</p>
 <ol start="3">
-<li>Run psql</li>
+<li>Open <code>psql</code></li>
 </ol>
 <pre><code>bin/psql ProjectDB</code></pre>
 <p>You should see the following output.
@@ -191,9 +191,23 @@ You can then type and run sql in this program.</p>
 </ol>
 <pre><code>bin/postgres -D data</code></pre>
 <ol start="3">
-<li>Run psql (<code>Terminal C</code>)</li>
+<li>Open <code>psql</code> (<code>Terminal C</code>)</li>
 </ol>
 <pre><code>bin/psql ProjectDB</code></pre>
+<h2 id="optional"><a class="header" href="#optional">Optional</a></h2>
+<p>You can add <code>$W$/install/bin</code> to your <code>PATH</code> environment variable, so you don't need to go to <code>$W$/install</code> every time to start the server and open <code>psql</code>. To do so:</p>
+<ol>
+<li>Add <code>$W$/install/bin</code> to <code>~/.bashrc</code>, remember to replace <code>$W$</code> with your actual working directory</li>
+</ol>
+<pre><code>echo 'export PATH=$W$/install/bin:$PATH' >> ~/.bashrc</code></pre>
+<ol start="2">
+<li>&quot;Refresh&quot; bash</li>
+</ol>
+<pre><code>source ~/.bashrc</code></pre>
+<p>Then you can start the server at any directory with</p>
+<pre><code>postgres -D data</code></pre>
+<p>And open the client with</p>
+<pre><code>psql ProjectDB</code></pre>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
