@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE UNIX machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> PART 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> PART 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> PART 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE UNIX machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -471,7 +471,7 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <li>Part 2: 60 points</li>
 <li>Part 3: 20 points</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="part-1-projectdb-schema-creation"><a class="header" href="#part-1-projectdb-schema-creation">PART 1: ProjectDB Schema Creation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-1-projectdb-schema-creation"><a class="header" href="#part-1-projectdb-schema-creation">Part 1: ProjectDB Schema Creation</a></h1>
 <p>ProjectDB consists of the following relations defined in the following schemas. Please create tables for them in PostgreSQL.</p>
 <blockquote>
 <p>University (<br />
@@ -522,11 +522,14 @@ MgrId: NUMERIC REFERENCES Employee(EmpId)<br />
 <p>The submission of your work is a file named <code>p1.sql</code>, that contains all SQL queries to create the above relations.</p>
 <h2 id="grading-criteria"><a class="header" href="#grading-criteria">Grading Criteria:</a></h2>
 <ul>
-<li>Total: 20 points</li>
+<li>Total: 20 points
+<ul>
 <li>10 Points: The provided script is able to create all the above relations with the correct schema.</li>
 <li>10 Points: The provided script handles the FOREIGN KEY constraint perfectly.</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="part-2-sql-queries"><a class="header" href="#part-2-sql-queries">PART 2: SQL Queries</a></h1>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-2-sql-queries"><a class="header" href="#part-2-sql-queries">Part 2: SQL Queries</a></h1>
 <p>Once you have created the above schema, run the <code>data.sql</code> file to load the data into the database.</p>
 <pre><code>\i &#60;path-to-data.sql&#62;</code></pre>
 <p>Then, write SQL queries that answer the questions below (one SQL query per question but you are allowed to use nested queries). The query answers should be duplicate-free, but you should use distinct only when necessary.</p>
@@ -556,7 +559,7 @@ MgrId: NUMERIC REFERENCES Employee(EmpId)<br />
 <ul>
 <li>10 Points (no partial credit) for each correct SQL query.</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="part-3-sql-updates-and-deletes"><a class="header" href="#part-3-sql-updates-and-deletes">PART 3: SQL Updates and Deletes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-3-sql-updates-and-deletes"><a class="header" href="#part-3-sql-updates-and-deletes">Part 3: SQL Updates and Deletes</a></h1>
 <ol>
 <li>
 <p>Employee with Id 2 has moved to an address in 55414. Please update this in the database and select that employee after the update to ensure that the corresponding tuple has been updated.</p>

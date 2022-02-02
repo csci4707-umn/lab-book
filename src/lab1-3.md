@@ -1,4 +1,4 @@
-# PART 3: SQL Updates and Deletes
+# Part 3: SQL Updates and Deletes
 
 1. Employee with Id 2 has moved to an address in 55414. Please update this in the database and select that employee after the update to ensure that the corresponding tuple has been updated.
 

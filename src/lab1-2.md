@@ -1,4 +1,4 @@
-# PART 2: SQL Queries
+# Part 2: SQL Queries
 
 Once you have created the above schema, run the `data.sql` file to load the data into the database.
 

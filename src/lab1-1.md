@@ -1,4 +1,4 @@
-# PART 1: ProjectDB Schema Creation
+# Part 1: ProjectDB Schema Creation
 
 ProjectDB consists of the following relations defined in the following schemas. Please create tables for them in PostgreSQL.
 
@@ -45,5 +45,5 @@ The submission of your work is a file named `p1.sql`, that contains all SQL quer
 
 ## Grading Criteria:
 - Total: 20 points
-- 10 Points: The provided script is able to create all the above relations with the correct schema.
-- 10 Points: The provided script handles the FOREIGN KEY constraint perfectly.
+  - 10 Points: The provided script is able to create all the above relations with the correct schema.
+  - 10 Points: The provided script handles the FOREIGN KEY constraint perfectly.
