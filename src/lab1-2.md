@@ -1,6 +1,10 @@
 # PART 2: SQL Queries
 
-Once you have created the above schema, run the `data.sql` file to load the data into the database. Then, write SQL queries that answer the questions below (one SQL query per question but you are allowed to use nested queries). The query answers should be duplicate-free, but you should use distinct only when necessary.
+Once you have created the above schema, run the `data.sql` file to load the data into the database.
+
+<pre><code>\i &#60;path-to-data.sql&#62;</code></pre>
+
+Then, write SQL queries that answer the questions below (one SQL query per question but you are allowed to use nested queries). The query answers should be duplicate-free, but you should use distinct only when necessary.
 
 1. Find the names of the employees who are living in Minneapolis (Zip code 55414 or 55455).
 

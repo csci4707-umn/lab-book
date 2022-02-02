@@ -2,7 +2,7 @@
 
 PostgreSQL takes a classic *server-client* architecture. Therefore, we need two terminal windows to start the server and client separately. Let's call them `Terminal S` (for server) and `Terminal C` (for client) respectively.
 
-## First time start the server and run the client
+## First time start the server and open the client
 
 #### Terminal S
 1. Make sure you are in the installation folder`$W$/install`.
@@ -15,7 +15,7 @@ You should see the following output.
 It will keep printing out logs in this terminal. We can use this terminal to get information on what is happening in our DBMS.
 
 #### Terminal C
-To run the client, open another terminal and use the following command to create a database to use: (In this example, we call the database `ProjectDB`)
+To open the client, open another terminal and use the following command to create a database to use: (In this example, we call the database `ProjectDB`)
 
 1. Make sure you are in the installation folder`$W$/install`.
 <pre><code>cd $W$/install</code></pre>
@@ -25,7 +25,7 @@ To run the client, open another terminal and use the following command to create
 
 We interact with our DBMS by using a program called `psql`.
 
-3. Run psql
+3. Open `psql`
 <pre><code>bin/psql ProjectDB</code></pre>
 You should see the following output.
 ![client](./figure/client.png)
@@ -43,5 +43,20 @@ The next time you want to start the database again, you only need to run two ter
 2. Start the server (`Terminal S`)
 <pre><code>bin/postgres -D data</code></pre>
 
-3. Run psql (`Terminal C`)
+3. Open `psql` (`Terminal C`)
 <pre><code>bin/psql ProjectDB</code></pre>
+
+## Optional
+You can add `$W$/install/bin` to your `PATH` environment variable, so you don't need to go to `$W$/install` every time to start the server and open `psql`. To do so:
+
+1. Add `$W$/install/bin` to `~/.bashrc`, remember to replace `$W$` with your actual working directory
+<pre><code>echo 'export PATH=$W$/install/bin:$PATH' >> ~/.bashrc</code></pre>
+
+2. "Refresh" bash
+<pre><code>source ~/.bashrc</code></pre>
+
+Then you can start the server at any directory with
+<pre><code>postgres -D data</code></pre>
+
+And open the client with
+<pre><code>psql ProjectDB</code></pre>
