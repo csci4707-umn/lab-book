@@ -415,7 +415,41 @@ INSERT 0 1
 (2 rows)
 </code></pre>
 <p><code>.sql</code> file can also be passed as an argument to <code>psql</code>, so you can run a <code>.sql</code> file without going into <code>psql</code>. Copy and run following command in your terminal. </p>
-<pre><code>bin/psql ProjectDB -f $W$/script.sql</code></pre><div style="break-before: page; page-break-before: always;"></div><h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
+<pre><code>bin/psql ProjectDB -f $W$/script.sql</code></pre>
+<p>You should see the following output. </p>
+<pre><code>$ bin/psql ProjectDB -f $W$/script.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ sid | name
+-----+-------
+   1 | John
+   2 | Sam
+   3 | Mark
+   4 | Ted
+   5 | Ross
+   6 | James
+   7 | Tom
+(7 rows)
+
+ sid
+-----
+   5
+(1 row)
+
+ name
+------
+ John
+ Sam
+(2 rows)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h1>
 <p>Will keep updating as time goes on. Contributions are welcomed.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lab-1"><a class="header" href="#lab-1">Lab 1</a></h1>
 <blockquote>

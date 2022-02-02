@@ -143,3 +143,39 @@ INSERT 0 1
 `.sql` file can also be passed as an argument to `psql`, so you can run a `.sql` file without going into `psql`. Copy and run following command in your terminal. 
 
 <pre><code>bin/psql ProjectDB -f $W$/script.sql</code></pre>
+
+You should see the following output. 
+
+```
+$ bin/psql ProjectDB -f $W$/script.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ sid | name
+-----+-------
+   1 | John
+   2 | Sam
+   3 | Mark
+   4 | Ted
+   5 | Ross
+   6 | James
+   7 | Tom
+(7 rows)
+
+ sid
+-----
+   5
+(1 row)
+
+ name
+------
+ John
+ Sam
+(2 rows)
+```

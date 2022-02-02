@@ -273,6 +273,40 @@ INSERT 0 1
 </code></pre>
 <p><code>.sql</code> file can also be passed as an argument to <code>psql</code>, so you can run a <code>.sql</code> file without going into <code>psql</code>. Copy and run following command in your terminal. </p>
 <pre><code>bin/psql ProjectDB -f $W$/script.sql</code></pre>
+<p>You should see the following output. </p>
+<pre><code>$ bin/psql ProjectDB -f $W$/script.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ sid | name
+-----+-------
+   1 | John
+   2 | Sam
+   3 | Mark
+   4 | Ted
+   5 | Ross
+   6 | James
+   7 | Tom
+(7 rows)
+
+ sid
+-----
+   5
+(1 row)
+
+ name
+------
+ John
+ Sam
+(2 rows)
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
