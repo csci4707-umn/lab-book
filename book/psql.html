@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE UNIX machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html" class="active"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html" class="active"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -146,8 +146,8 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="postgresql-101"><a class="header" href="#postgresql-101">PostgreSQL 101</a></h1>
-<p>You are supposed to learn how to use PostgreSQL on you own. Specific SQL grammar (dialect) is not the focus on this course. This tutorial only aims to help you start the labs. The code blocks on this page are aimed for examples, not for copy-and-run. </p>
-<h3 id="all-sql-in-postgresql-end-with-a-"><a class="header" href="#all-sql-in-postgresql-end-with-a-">All sql in PostgreSQL end with a &quot;;&quot;</a></h3>
+<p>You are supposed to learn how to use PostgreSQL on you own. Specific SQL grammar (dialect) is not the focus of this course. This tutorial only aims to help you start the labs. The code blocks on this page are aimed for examples, not for copy-and-run. </p>
+<h3 id="1-all-sql-in-postgresql-end-with-a-"><a class="header" href="#1-all-sql-in-postgresql-end-with-a-">1. All sql in PostgreSQL end with a &quot;;&quot;</a></h3>
 <p><code>psql</code> waits for a <code>;</code>, then it knows it is an end for the sql. To run an SQL, type your sql, end with a <code>;</code> then hit <code>Enter</code>.</p>
 <pre><code>ProjectDB=# CREATE TABLE student (sid integer, name text);
 CREATE TABLE
@@ -164,7 +164,7 @@ ProjectDB(# )
 ProjectDB-# ;
 CREATE TABLE
 </code></pre>
-<h3 id="helpful-commands-in-psql"><a class="header" href="#helpful-commands-in-psql">Helpful commands in <code>psql</code></a></h3>
+<h3 id="2-helpful-commands-in-psql"><a class="header" href="#2-helpful-commands-in-psql">2. Helpful commands in <code>psql</code></a></h3>
 <p>In addition to SQL, <code>psql</code> has many helpful commands.</p>
 <ol>
 <li>You must exit psql by typing <code>\q</code> and do not use <code>ctrl-c</code>.</li>
@@ -194,7 +194,7 @@ CREATE TABLE
 <ol start="4">
 <li>To run an sql script located at <code>$W$/script.sql</code>, use <code>\i $W$/script.sql</code></li>
 </ol>
-<h3 id="an-example-sql-script"><a class="header" href="#an-example-sql-script">An example SQL script</a></h3>
+<h3 id="3-an-example-sql-script"><a class="header" href="#3-an-example-sql-script">3. An example SQL script</a></h3>
 <p>Just like <code>.sh</code> file for shell, <code>.sql</code> file is an executable file for <code>psql</code>, containing one or more sql queries. </p>
 <p>Create a new file <code>script.sql</code> in <code>$W$</code>. Copy the following to the file. </p>
 <pre><code>/*
@@ -239,7 +239,7 @@ WHERE name = 'Ross';
 select sid from student where sid &lt; 3;
 </code></pre>
 <blockquote>
-<p>As you can tell from the last query, sql is case insensitive. However, it is always good to follow some style guides, for example this <a href="https://www.sqlstyle.guide/">guide</a>.</p>
+<p>As you can tell from the last query, SQL is case insensitive. However, it is always good to follow some style guides, for example this <a href="https://www.sqlstyle.guide/">guide</a>.</p>
 </blockquote>
 <p>Save the file and go back into <code>psql</code>. To run the script, use <code>\i $W$/script.sql</code>.</p>
 <pre><code>ProjectDB=# \i $W$/script.sql
@@ -309,7 +309,11 @@ INSERT 0 1
  Sam
 (2 rows)
 </code></pre>
-<h3 id="use-online-sources"><a class="header" href="#use-online-sources">Use online sources</a></h3>
+<h3 id="4-use-online-resources"><a class="header" href="#4-use-online-resources">4. Use online resources</a></h3>
+<p>You can find tons of tutorials, Q&amp;As for SQL and PostgreSQL on Internet.</p>
+<ul>
+<li><a href="https://www.postgresql.org/docs/14/index.html">Official PostgreSQL document</a></li>
+</ul>
 
                     </main>
 

@@ -1,8 +1,8 @@
 # PostgreSQL 101
 
-You are supposed to learn how to use PostgreSQL on you own. Specific SQL grammar (dialect) is not the focus on this course. This tutorial only aims to help you start the labs. The code blocks on this page are aimed for examples, not for copy-and-run. 
+You are supposed to learn how to use PostgreSQL on you own. Specific SQL grammar (dialect) is not the focus of this course. This tutorial only aims to help you start the labs. The code blocks on this page are aimed for examples, not for copy-and-run. 
 
-### All sql in PostgreSQL end with a ";"
+### 1. All sql in PostgreSQL end with a ";"
 `psql` waits for a `;`, then it knows it is an end for the sql. To run an SQL, type your sql, end with a `;` then hit `Enter`.
 
 ```
@@ -25,7 +25,7 @@ ProjectDB-# ;
 CREATE TABLE
 ```
 
-### Helpful commands in `psql`
+### 2. Helpful commands in `psql`
 
 In addition to SQL, `psql` has many helpful commands.
 
@@ -56,7 +56,7 @@ ProjectDB=# \d student
 
 4. To run an sql script located at `$W$/script.sql`, use `\i $W$/script.sql`
 
-### An example SQL script
+### 3. An example SQL script
 
 Just like `.sh` file for shell, `.sql` file is an executable file for `psql`, containing one or more sql queries. 
 
@@ -182,7 +182,7 @@ INSERT 0 1
 (2 rows)
 ```
 
-### Use online resources
+### 4. Use online resources
 You can find tons of tutorials, Q&As for SQL and PostgreSQL on Internet.
 
 - [Official PostgreSQL document](https://www.postgresql.org/docs/14/index.html)

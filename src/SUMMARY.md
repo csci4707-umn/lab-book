@@ -1,7 +1,7 @@
 # Summary
 
 - [Introduction](./intro.md)
-- [Connect to CSE UNIX machines](./machine.md)
+- [Connect to CSE Lab machines](./machine.md)
 - [Setup PostgreSQL](./setup.md)
   - [Installation](./install.md)
   - [Run PostgreSQL](./run.md)

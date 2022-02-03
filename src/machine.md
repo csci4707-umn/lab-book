@@ -1,6 +1,6 @@
-# Connect to CSE UNIX machines
+# Connect to CSE Lab machines
 
-All projects should be able to run on any CSE UNIX/Linux machines.
+All projects should be able to run on any CSE UNIX/Linux lab machines.
 
 You should have an active CSE Labs Account and be able to connect to the machines. If not, please connect TA **ASAP**. 
 

@@ -3,8 +3,10 @@
 We first download and install PostgreSQL, then we initialize a folder for PostgreSQL to keep data.
 
 ## Pre-request
-1. You should be able to connect to any CSE UNIX/Linux machines. See detail on this [page](./machine.md)
+1. All projects should be able to run on any CSE UNIX/Linux lab machines. You should be able to connect to any CSE UNIX/Linux machines. See detail on this [page](./machine.md)
 2. PostgreSQL is a large software. You will want at least 200 MB of space in your machine. If not, learn how to free your space on this [page](https://cse.umn.edu/cseit/self-help-guides/disk-quota-free-your-space).
+
+> We recommend to work on the machines (with numbers) listed on this [page](https://cse.umn.edu/cseit/classrooms-labs), for example `csel-kh1250-01.cselabs.umn.edu`. VOLE is **NOT** recommended for the lab works.
 
 ## Install PostgreSQL
 

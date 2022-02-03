@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE UNIX machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,8 +152,8 @@
 Do <strong>NOT</strong> post your project on a public Github repository.</p>
 </blockquote>
 <p>This is the online handout for lab assignments for CSCI4707 at UMN. </p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="connect-to-cse-unix-machines"><a class="header" href="#connect-to-cse-unix-machines">Connect to CSE UNIX machines</a></h1>
-<p>All projects should be able to run on any CSE UNIX/Linux machines.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="connect-to-cse-lab-machines"><a class="header" href="#connect-to-cse-lab-machines">Connect to CSE Lab machines</a></h1>
+<p>All projects should be able to run on any CSE UNIX/Linux lab machines.</p>
 <p>You should have an active CSE Labs Account and be able to connect to the machines. If not, please connect TA <strong>ASAP</strong>. </p>
 <p>We recommend to work on the machines listed on this <a href="https://cse.umn.edu/cseit/classrooms-labs">page</a>, for example <code>csel-kh1250-01.cselabs.umn.edu</code>. VOLE is <strong>NOT</strong> recommended for the lab works.</p>
 <p>You are free to use any terminal/editor/IDE. I personally recommend to use <a href="https://code.visualstudio.com/">VS code</a> for all labs, as it provides a built-in terminal and allows you to edit files remotely. You can learn how to set up remote editing for VS Code on this <a href="https://www-users.cse.umn.edu/%7Ekauffman/tutorials/unix-environment.html#org07b4b9f">page</a><sup class="footnote-reference"><a href="#1">1</a></sup>.</p>
@@ -176,9 +176,12 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <p>We first download and install PostgreSQL, then we initialize a folder for PostgreSQL to keep data.</p>
 <h2 id="pre-request"><a class="header" href="#pre-request">Pre-request</a></h2>
 <ol>
-<li>You should be able to connect to any CSE UNIX/Linux machines. See detail on this <a href="./machine.html">page</a></li>
+<li>All projects should be able to run on any CSE UNIX/Linux lab machines. You should be able to connect to any CSE UNIX/Linux machines. See detail on this <a href="./machine.html">page</a></li>
 <li>PostgreSQL is a large software. You will want at least 200 MB of space in your machine. If not, learn how to free your space on this <a href="https://cse.umn.edu/cseit/self-help-guides/disk-quota-free-your-space">page</a>.</li>
 </ol>
+<blockquote>
+<p>We recommend to work on the machines (with numbers) listed on this <a href="https://cse.umn.edu/cseit/classrooms-labs">page</a>, for example <code>csel-kh1250-01.cselabs.umn.edu</code>. VOLE is <strong>NOT</strong> recommended for the lab works.</p>
+</blockquote>
 <h2 id="install-postgresql"><a class="header" href="#install-postgresql">Install PostgreSQL</a></h2>
 <ol>
 <li>Download version 14.1 of PostgreSQL.</li>
@@ -289,8 +292,8 @@ You can then type and run sql in this program.</p>
 <pre><code>postgres -D data</code></pre>
 <p>And open the client with</p>
 <pre><code>psql ProjectDB</code></pre><div style="break-before: page; page-break-before: always;"></div><h1 id="postgresql-101"><a class="header" href="#postgresql-101">PostgreSQL 101</a></h1>
-<p>You are supposed to learn how to use PostgreSQL on you own. Specific SQL grammar (dialect) is not the focus on this course. This tutorial only aims to help you start the labs. The code blocks on this page are aimed for examples, not for copy-and-run. </p>
-<h3 id="all-sql-in-postgresql-end-with-a-"><a class="header" href="#all-sql-in-postgresql-end-with-a-">All sql in PostgreSQL end with a &quot;;&quot;</a></h3>
+<p>You are supposed to learn how to use PostgreSQL on you own. Specific SQL grammar (dialect) is not the focus of this course. This tutorial only aims to help you start the labs. The code blocks on this page are aimed for examples, not for copy-and-run. </p>
+<h3 id="1-all-sql-in-postgresql-end-with-a-"><a class="header" href="#1-all-sql-in-postgresql-end-with-a-">1. All sql in PostgreSQL end with a &quot;;&quot;</a></h3>
 <p><code>psql</code> waits for a <code>;</code>, then it knows it is an end for the sql. To run an SQL, type your sql, end with a <code>;</code> then hit <code>Enter</code>.</p>
 <pre><code>ProjectDB=# CREATE TABLE student (sid integer, name text);
 CREATE TABLE
@@ -307,7 +310,7 @@ ProjectDB(# )
 ProjectDB-# ;
 CREATE TABLE
 </code></pre>
-<h3 id="helpful-commands-in-psql"><a class="header" href="#helpful-commands-in-psql">Helpful commands in <code>psql</code></a></h3>
+<h3 id="2-helpful-commands-in-psql"><a class="header" href="#2-helpful-commands-in-psql">2. Helpful commands in <code>psql</code></a></h3>
 <p>In addition to SQL, <code>psql</code> has many helpful commands.</p>
 <ol>
 <li>You must exit psql by typing <code>\q</code> and do not use <code>ctrl-c</code>.</li>
@@ -337,7 +340,7 @@ CREATE TABLE
 <ol start="4">
 <li>To run an sql script located at <code>$W$/script.sql</code>, use <code>\i $W$/script.sql</code></li>
 </ol>
-<h3 id="an-example-sql-script"><a class="header" href="#an-example-sql-script">An example SQL script</a></h3>
+<h3 id="3-an-example-sql-script"><a class="header" href="#3-an-example-sql-script">3. An example SQL script</a></h3>
 <p>Just like <code>.sh</code> file for shell, <code>.sql</code> file is an executable file for <code>psql</code>, containing one or more sql queries. </p>
 <p>Create a new file <code>script.sql</code> in <code>$W$</code>. Copy the following to the file. </p>
 <pre><code>/*
@@ -452,7 +455,7 @@ INSERT 0 1
  Sam
 (2 rows)
 </code></pre>
-<h3 id="use-online-resources"><a class="header" href="#use-online-resources">Use online resources</a></h3>
+<h3 id="4-use-online-resources"><a class="header" href="#4-use-online-resources">4. Use online resources</a></h3>
 <p>You can find tons of tutorials, Q&amp;As for SQL and PostgreSQL on Internet.</p>
 <ul>
 <li><a href="https://www.postgresql.org/docs/14/index.html">Official PostgreSQL document</a></li>
@@ -469,7 +472,7 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
 <p>In this project, you will create a ProjectDB database. ProjectDB is a database used by a software development company to keep track of its projects. ProjectDB keeps track of the projects, the employees/managers working on the projects including the universities they were graduated from. In particular, in this lab, you will perform the following tasks:</p>
 <ol>
-<li>Setup the PostgreSQL database. See this <a href="./setup.html">page</a>.</li>
+<li>Setup the PostgreSQL database. You need to finish <a href="./setup.html">Chapter 3</a> before working on the following tasks. </li>
 <li>Create the schema of the ProjectDB database.</li>
 <li>Perform multiple queries. </li>
 </ol>
