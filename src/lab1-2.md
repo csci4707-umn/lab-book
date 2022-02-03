@@ -4,7 +4,7 @@ Once you have created the above schemas, you need to load some data to the relat
 
 Download [`data.sql`](./resource/data.sql) with this command:
 
-<pre><code>wget </code></pre>
+<pre><code>wget https://csci4707-umn.github.io/lab-book/resource/lab1/data.sql</code></pre>
 
 Run the `data.sql` file to load the data into the database.
 
