@@ -9,8 +9,9 @@ You are going to use PostgreSQL, a major open source DMBS, to perform some queri
 ## Overview
 In this project, you will create a ProjectDB database. ProjectDB is a database used by a software development company to keep track of its projects. ProjectDB keeps track of the projects, the employees/managers working on the projects including the universities they were graduated from. In particular, in this lab, you will perform the following tasks:
 1. Setup the PostgreSQL database. You need to finish [Chapter 3](./setup.md) before working on the following tasks. 
-2. Create the schema of the ProjectDB database.
-3. Perform multiple queries. 
+2. Create the schema of the ProjectDB database. [Part 1](./lab1-1.md)
+3. Perform multiple queries. [Part 2](./lab1-2.md)
+4. Perform data updates. [Part 3](./lab1-3.md)
 
 ## Grading
 - Part 1: 20 points

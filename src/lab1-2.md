@@ -1,6 +1,12 @@
 # Part 2: SQL Queries
 
-Once you have created the above schema, run the `data.sql` file to load the data into the database.
+Once you have created the above schemas, you need to load some data to the relations. 
+
+Download [`data.sql`](./resource/data.sql) with this command:
+
+<pre><code>wget </code></pre>
+
+Run the `data.sql` file to load the data into the database.
 
 <pre><code>\i &#60;path-to-data.sql&#62;</code></pre>
 

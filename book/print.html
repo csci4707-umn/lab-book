@@ -473,8 +473,9 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <p>In this project, you will create a ProjectDB database. ProjectDB is a database used by a software development company to keep track of its projects. ProjectDB keeps track of the projects, the employees/managers working on the projects including the universities they were graduated from. In particular, in this lab, you will perform the following tasks:</p>
 <ol>
 <li>Setup the PostgreSQL database. You need to finish <a href="./setup.html">Chapter 3</a> before working on the following tasks. </li>
-<li>Create the schema of the ProjectDB database.</li>
-<li>Perform multiple queries. </li>
+<li>Create the schema of the ProjectDB database. <a href="./lab1-1.html">Part 1</a></li>
+<li>Perform multiple queries. <a href="./lab1-2.html">Part 2</a></li>
+<li>Perform data updates. <a href="./lab1-3.html">Part 3</a></li>
 </ol>
 <h2 id="grading"><a class="header" href="#grading">Grading</a></h2>
 <ul>
@@ -541,7 +542,10 @@ MgrId: NUMERIC REFERENCES Employee(EmpId)<br />
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="part-2-sql-queries"><a class="header" href="#part-2-sql-queries">Part 2: SQL Queries</a></h1>
-<p>Once you have created the above schema, run the <code>data.sql</code> file to load the data into the database.</p>
+<p>Once you have created the above schemas, you need to load some data to the relations. </p>
+<p>Download <a href="./resource/data.sql"><code>data.sql</code></a> with this command:</p>
+<pre><code>wget </code></pre>
+<p>Run the <code>data.sql</code> file to load the data into the database.</p>
 <pre><code>\i &#60;path-to-data.sql&#62;</code></pre>
 <p>Then, write SQL queries that answer the questions below (one SQL query per question but you are allowed to use nested queries). The query answers should be duplicate-free, but you should use distinct only when necessary.</p>
 <ol>
