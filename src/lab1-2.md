@@ -6,7 +6,7 @@ Download [`data.sql`](./resource/data.sql) with this command:
 
 <pre><code>wget https://csci4707-umn.github.io/lab-book/resource/lab1/data.sql</code></pre>
 
-Run the `data.sql` file to load the data into the database.
+Run the `data.sql` file to load the data into the database. In `psql`:
 
 <pre><code>\i &#60;path-to-data.sql&#62;</code></pre>
 
