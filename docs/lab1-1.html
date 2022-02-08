@@ -147,49 +147,65 @@
                     <main>
                         <h1 id="part-1-projectdb-schema-creation"><a class="header" href="#part-1-projectdb-schema-creation">Part 1: ProjectDB Schema Creation</a></h1>
 <p>ProjectDB consists of the following relations defined in the following schemas. Please create tables for them in PostgreSQL.</p>
+<h4 id="important-update-0208"><a class="header" href="#important-update-0208">Important Update (02/08)</a></h4>
+<ul>
+<li>Primary keys are underlined for each relation. You need to include them in your <code>CREATE TABLE</code> statements. </li>
+<li>Include the following constrain with <code>ON DELETE</code> actions in your <code>CREATE TABLE</code> statements. 
+<ul>
+<li>When a project is removed from record, we no longer keep records for <code>EmpProject</code> and <code>ProjectManager</code>.</li>
+</ul>
+</li>
+<li>You may find these parts of document useful for this lab
+<ul>
+<li><a href="https://www.postgresql.org/docs/14/ddl.html">Create table related</a></li>
+<li><a href="https://www.postgresql.org/docs/14/queries.html">Query related</a></li>
+<li><a href="https://www.postgresql.org/docs/14/dml.html">Insert/delete related</a></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <p>University (<br />
-UnivId: NUMERIC<br />
-UnivName: VARCHAR(40)<br />
+  <u>UnivId</u>: NUMERIC<br />
+  UnivName: VARCHAR(40)<br />
 )</p>
 </blockquote>
 <blockquote>
 <p>Department (<br />
-DeptId: NUMERIC<br />
-DeptName: VARCHAR(40)<br />
+  <u>DeptId</u>: NUMERIC<br />
+  DeptName: VARCHAR(40)<br />
 )</p>
 </blockquote>
 <blockquote>
 <p>Employee (<br />
-EmpId: NUMERIC<br />
-EmpName: VARCHAR(40)<br />
-DeptId: NUMERIC REFERENCES Department(DeptId)<br />
-HomeZipCode: NUMERIC<br />
+  <u>EmpId</u>: NUMERIC<br />
+  EmpName: VARCHAR(40)<br />
+  DeptId: NUMERIC REFERENCES Department(DeptId)<br />
+  HomeZipCode: NUMERIC<br />
 )</p>
 </blockquote>
 <blockquote>
 <p>Project (<br />
-ProjId: NUMERIC<br />
-ProjName: VARCHAR(40)<br />
+  <u>ProjId</u>: NUMERIC<br />
+  ProjName: VARCHAR(40)<br />
 )</p>
 </blockquote>
 <blockquote>
 <p>Graduate (<br />
-EmpId: NUMERIC REFERENCES Employee(EmpId)<br />
-UnivId: NUMERIC REFERENCES University(UnivId)<br />
-GradYear: NUMERIC<br />
+  <u>EmpId</u>: NUMERIC REFERENCES Employee(EmpId)<br />
+  UnivId: NUMERIC REFERENCES University(UnivId)<br />
+  GradYear: NUMERIC<br />
 )</p>
 </blockquote>
 <blockquote>
 <p>EmpProject (<br />
-EmpId: NUMERIC REFERENCES Employee(EmpId)<br />
-ProjId: NUMERIC REFERENCES Project(ProjId)<br />
+  <u>EmpId</u>: NUMERIC REFERENCES Employee(EmpId)<br />
+  <u>ProjId</u>: NUMERIC REFERENCES Project(ProjId)<br />
 )</p>
 </blockquote>
 <blockquote>
 <p>ProjectManager (<br />
-ProjId: NUMERIC REFERENCES Project(ProjId)<br />
-MgrId: NUMERIC REFERENCES Employee(EmpId)<br />
+  <u>ProjId</u>: NUMERIC REFERENCES Project(ProjId)<br />
+  <u>MgrId</u>: NUMERIC REFERENCES Employee(EmpId)<br />
 )</p>
 </blockquote>
 <h2 id="what-to-submit"><a class="header" href="#what-to-submit">What to Submit?</a></h2>

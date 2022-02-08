@@ -2,42 +2,51 @@
 
 ProjectDB consists of the following relations defined in the following schemas. Please create tables for them in PostgreSQL.
 
+#### Important Update (02/08)
+- Primary keys are underlined for each relation. You need to include them in your `CREATE TABLE` statements. 
+- Include the following constrain with `ON DELETE` actions in your `CREATE TABLE` statements. 
+  - When a project is removed from record, we no longer keep records for `EmpProject` and `ProjectManager`.
+- You may find these parts of document useful for this lab
+  - [Create table related](https://www.postgresql.org/docs/14/ddl.html)
+  - [Query related](https://www.postgresql.org/docs/14/queries.html)
+  - [Insert/delete related](https://www.postgresql.org/docs/14/dml.html)
+
 >University (  
->UnivId: NUMERIC  
->UnivName: VARCHAR(40)  
+>&nbsp;&nbsp;<u>UnivId</u>: NUMERIC  
+>&nbsp;&nbsp;UnivName: VARCHAR(40)  
 >)
 
 >Department (  
->DeptId: NUMERIC  
->DeptName: VARCHAR(40)  
+>&nbsp;&nbsp;<u>DeptId</u>: NUMERIC  
+>&nbsp;&nbsp;DeptName: VARCHAR(40)  
 >)
 
 >Employee (  
->EmpId: NUMERIC  
->EmpName: VARCHAR(40)  
->DeptId: NUMERIC REFERENCES Department(DeptId)  
->HomeZipCode: NUMERIC  
+>&nbsp;&nbsp;<u>EmpId</u>: NUMERIC  
+>&nbsp;&nbsp;EmpName: VARCHAR(40)  
+>&nbsp;&nbsp;DeptId: NUMERIC REFERENCES Department(DeptId)  
+>&nbsp;&nbsp;HomeZipCode: NUMERIC  
 >)
 
 >Project (  
->ProjId: NUMERIC  
->ProjName: VARCHAR(40)  
+>&nbsp;&nbsp;<u>ProjId</u>: NUMERIC  
+>&nbsp;&nbsp;ProjName: VARCHAR(40)  
 >)
 
 >Graduate (  
->EmpId: NUMERIC REFERENCES Employee(EmpId)  
->UnivId: NUMERIC REFERENCES University(UnivId)  
->GradYear: NUMERIC  
+>&nbsp;&nbsp;<u>EmpId</u>: NUMERIC REFERENCES Employee(EmpId)  
+>&nbsp;&nbsp;UnivId: NUMERIC REFERENCES University(UnivId)  
+>&nbsp;&nbsp;GradYear: NUMERIC  
 >)
   
 >EmpProject (  
->EmpId: NUMERIC REFERENCES Employee(EmpId)  
->ProjId: NUMERIC REFERENCES Project(ProjId)  
+>&nbsp;&nbsp;<u>EmpId</u>: NUMERIC REFERENCES Employee(EmpId)  
+>&nbsp;&nbsp;<u>ProjId</u>: NUMERIC REFERENCES Project(ProjId)  
 >)
 
 >ProjectManager (  
->ProjId: NUMERIC REFERENCES Project(ProjId)  
->MgrId: NUMERIC REFERENCES Employee(EmpId)  
+>&nbsp;&nbsp;<u>ProjId</u>: NUMERIC REFERENCES Project(ProjId)  
+>&nbsp;&nbsp;<u>MgrId</u>: NUMERIC REFERENCES Employee(EmpId)  
 >)
 
 ## What to Submit?
