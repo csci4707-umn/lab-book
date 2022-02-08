@@ -11,6 +11,7 @@
   - [Part 1: ProjectDB Schema Creation](./lab1-1.md)
   - [Part 2: SQL Queries](./lab1-2.md)
   - [Part 3: SQL Updates and Deletes](./lab1-3.md)
+  - [Important updates](./lab1-update.md)
   - [Submit Guidance](./lab1-submit.md)
 - [Lab 2](./lab2.md)  
 - [Lab 3](./lab3.md)

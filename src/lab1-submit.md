@@ -3,6 +3,11 @@
 > <i class="trigger fa fa-exclamation-triangle fa-lg"></i>
 > Do **NOT** post your project on a public Github repository.
 
+>Please make sure you have followed the updates before submit your work. 
+> 
+>Ordered by date
+>- [02/08](./lab1-1.md#important-update-0208)
+
 **Only one** submission is needed for group work. Please include everyone’s name and ID in a `README.txt` file.
 
 The `README.txt` file should use the following template, where ID is your `x.500` ID.
