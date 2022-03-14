@@ -31,7 +31,7 @@ Please answer the following questions based on the original code of PostgreSQL 1
 5. Where does PostgreSQL "use" each buffer? In which file? In which function? (2 pts)
 
 ## Submitting and Grading
-This work is due on Mar. 29, about half way through the whole lab. 
+This work is due on Mar. 29, about half way through the whole lab. Only **one** submission is needed for each group. 
 
 You will get all 15 points if you answer all the questions, regardless their correctness. 
 
