@@ -15,7 +15,7 @@ These questions are designed to let you start early and guide you through the co
 
 Please answer the following questions based on the original code of PostgreSQL 14.1:
 
-1. There are five files under `$W$/postgresql-14.1/src/backend/storage/buffer/`. What is each file's job? Answer in one sentence for each file. (5 pts)
+1. There are five files under `$W$/postgresql-14.1/src/backend/storage/buffer/`. What is each file's job? Answer for each file in one sentence. (5 pts)
 - buf_init.c
 - buf_table.c
 - bufmgr.c
