@@ -22,6 +22,7 @@ You must submit a zip file named `<x.500>.zip`. Your zip file should unzip to a 
 └── changes
     ├── foo.c
     ├── bar.c
+    ├── ...
     └── foo.h
 ```
 
@@ -40,11 +41,10 @@ Brief Summary:
 Detailed Changes:
 1. <Modified File 1>: <The path of the modified file from src directory>
 	- <Detailed changes of the file>.
-	For example: In line xxx, I make a change so that the buffer will do........
+	For example: In line xxx, I make a change so that the buffer will do ......
 	
 2. <Modified File 2>: <Path from src>
 	- <Detailed changes of the file>.
-
 ```
 
 Each violation to the submission guideline will result in a **10%** penalty.
