@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Part 2: Compile and Test - CSCI 4707 lab-book</title>
+        <title>Part 3: Compile and Test - CSCI 4707 lab-book</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-update.html"><strong aria-hidden="true">4.4.</strong> Important updates</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.5.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab2-1.html"><strong aria-hidden="true">5.1.</strong> Part 1: Implement MRU</a></li><li class="chapter-item expanded "><a href="lab2-2.html" class="active"><strong aria-hidden="true">5.2.</strong> Part 2: Compile and Test</a></li><li class="chapter-item expanded "><a href="lab2-submit.html"><strong aria-hidden="true">5.3.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-update.html"><strong aria-hidden="true">4.4.</strong> Important updates</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.5.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab2-0.html"><strong aria-hidden="true">5.1.</strong> Part 1: Understand Code</a></li><li class="chapter-item expanded "><a href="lab2-1.html"><strong aria-hidden="true">5.2.</strong> Part 2: Implement MRU</a></li><li class="chapter-item expanded "><a href="lab2-2.html" class="active"><strong aria-hidden="true">5.3.</strong> Part 3: Compile and Test</a></li><li class="chapter-item expanded "><a href="lab2-submit.html"><strong aria-hidden="true">5.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -145,18 +145,18 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="part-2-compile-and-test"><a class="header" href="#part-2-compile-and-test">Part 2: Compile and Test</a></h1>
+                        <h1 id="part-3-compile-and-test"><a class="header" href="#part-3-compile-and-test">Part 3: Compile and Test</a></h1>
 <h2 id="change-postgresql-config"><a class="header" href="#change-postgresql-config">Change PostgreSQL config</a></h2>
-<p>To test your changes, you will first need to change the memory size of PostgreSQL. Since the test case that is given to you is very small compared to the default memory size of PostgreSQL, it is a good idea to change the memory size in the configuration file of the PostgreSQL. </p>
-<p>The configuration is located in: <code>$W$/install/data/postgresql.conf</code>. You will change the shared_buffer size to shared_buffers = 128kB.</p>
+<p>To test your changes, you will first need to change the memory size of PostgreSQL. Since the test case that is given to you is very small compared to the default memory size of PostgreSQL, it is a good idea to config the memory to a smaller size. </p>
+<p>The configuration is located in: <code>$W$/install/data/postgresql.conf</code>. You will change the <strong>shared_buffer</strong> size to <strong>shared_buffers = 128kB</strong>.</p>
 <h2 id="compile-your-changes"><a class="header" href="#compile-your-changes">Compile your changes</a></h2>
 <p>To compile your changes, you must run the following three commands from the source directory, i.e., <code>$W$/postgresql-14.1</code>. Remember to shutdown your server before you make a new compiling:</p>
 <ol>
-<li>Clean the executable.</li>
+<li>Clean previous make.</li>
 </ol>
 <pre><code>make clean</code></pre>
 <ol start="2">
-<li>Remake</li>
+<li>Make</li>
 </ol>
 <pre><code>make</code></pre>
 <ol start="3">
@@ -165,10 +165,23 @@
 <pre><code>make install</code></pre>
 <p>If you get no error in this process, you will be able to start and server and client and test your changes. </p>
 <h2 id="test-your-changes"><a class="header" href="#test-your-changes">Test your changes</a></h2>
-<h3 id="1-get-test-data"><a class="header" href="#1-get-test-data">1. Get test data</a></h3>
-<p>Download test data </p>
+<p>You need two files to run the test:</p>
+<ul>
+<li><code>values10k.dat</code>: contains the data to be inserted into PostgreSQL.</li>
+<li><code>buffer_add.sql</code>: contains the sql to do the insertion.</li>
+</ul>
+<p>Download these two files to somewhere with following commands:</p>
 <pre><code>wget https://csci4707-umn.github.io/lab-book/resource/lab2/values10k.dat && wget https://csci4707-umn.github.io/lab-book/resource/lab2/buffer_add.sql</code></pre>
-<p>To test your change, run the test_data/buffer_add.sql file and look at the replaced buffer’s timestamp compared to all other candidate buffers’ timestamp. In order to run buffer_add.sql, you need to make one modification to the file. Please make sure you change the path of test_data/values10k.dat file according to its location.</p>
+<p>You will test your change by inserting data into the database and look at the replaced buffer’s timestamp compared to all other candidate buffers’ timestamp. </p>
+<p>To insert the data to the database, you need:</p>
+<ol>
+<li>In <code>buffer_add.sql</code>, update the <code>&lt;PATH_TO_values10k.dat&gt;</code> to the real path to <code>values10k.dat</code> on your test machine. </li>
+<li>Start the server and the <code>psql</code>.</li>
+<li>In <code>psql</code>, execute <code>buffer_add.sql</code> with following command, remember to replace <code>&lt;PATH_TO_buffer_add.sql&gt;</code> to the real path to <code>buffer_add.sql</code> on your test machine. </li>
+</ol>
+<pre><code>\i  &#60;PATH_TO_buffer_add.sql &#62;</code></pre>
+<p>An example of running the test is shown below. The terminal on the right is the server terminal and the terminal on the left is the client terminal. 
+<img src="./figure/mru-test.png" alt="mru-test" /></p>
 
                     </main>
 

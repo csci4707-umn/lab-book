@@ -6,4 +6,4 @@ create index value1_index on test_table(value1);
 
 set client_encoding = LATIN1;
 
-COPY test_table(value1,value2,value3,value4) from '<PATH_TO_DAT_FILE>/values10k.dat' DELIMITERS ';';
+COPY test_table(value1,value2,value3,value4) from '<PATH_TO_values10k.dat>' DELIMITERS ';';

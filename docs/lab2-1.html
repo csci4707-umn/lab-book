@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Part 1: Implement MRU - CSCI 4707 lab-book</title>
+        <title>Part 2: Implement MRU - CSCI 4707 lab-book</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-update.html"><strong aria-hidden="true">4.4.</strong> Important updates</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.5.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab2-1.html" class="active"><strong aria-hidden="true">5.1.</strong> Part 1: Implement MRU</a></li><li class="chapter-item expanded "><a href="lab2-2.html"><strong aria-hidden="true">5.2.</strong> Part 2: Compile and Test</a></li><li class="chapter-item expanded "><a href="lab2-submit.html"><strong aria-hidden="true">5.3.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-update.html"><strong aria-hidden="true">4.4.</strong> Important updates</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.5.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab2-0.html"><strong aria-hidden="true">5.1.</strong> Part 1: Understand Code</a></li><li class="chapter-item expanded "><a href="lab2-1.html" class="active"><strong aria-hidden="true">5.2.</strong> Part 2: Implement MRU</a></li><li class="chapter-item expanded "><a href="lab2-2.html"><strong aria-hidden="true">5.3.</strong> Part 3: Compile and Test</a></li><li class="chapter-item expanded "><a href="lab2-submit.html"><strong aria-hidden="true">5.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -145,50 +145,25 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="part-1-implement-mru"><a class="header" href="#part-1-implement-mru">Part 1: Implement MRU</a></h1>
-<h2 id="most-recent-used"><a class="header" href="#most-recent-used">Most Recent Used</a></h2>
-<p>The basic idea of MRU can be seen in <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Most_recently_used_(MRU)">here</a>. However, you will need to adapt the algorithm with the Database buffer management policy concept. </p>
-<h2 id="phase1"><a class="header" href="#phase1">Phase1</a></h2>
-<p>Please answer the following questions based on the original code of PostgreSQL 14.1:</p>
-<ol>
-<li>
-<p>There are five files under src/storage/buffer. What are their jobs? Answer in one sentense.
-buf_init.c
-buf_table.c
-bufmgr.c
-freelist.c
-localbuf.c</p>
-</li>
-<li>
-<p>What is the original buffer replacement policy/algorithm for PostgreSQL? In which file? In which function? From which line to which line? (4 pts)</p>
-</li>
-<li>
-<p>Which part of PostgreSQL code defines the concept &quot;buffer&quot;? In which file? By which class? (2 pts)</p>
-</li>
-<li>
-<p>Where does PostgreSQL initial each buffer? In which file? In which function? (2 pts)</p>
-</li>
-<li>
-<p>Where does PostgreSQL use each buffer? In which file? In which function? (2 pts)</p>
-</li>
-</ol>
+                        <h1 id="part-2-implement-mru"><a class="header" href="#part-2-implement-mru">Part 2: Implement MRU</a></h1>
 <h2 id="implement-mru-in-postgresql"><a class="header" href="#implement-mru-in-postgresql">Implement MRU in PostgreSQL</a></h2>
 <p>Most (if not all) of your changes will be located in the directory: <code>$W$/postgresql-14.1/src/backend/storage/buffer/</code>. </p>
-<p>To implement the MRU algorithm, you will want to maintain the timestamp of each buffer when they are used. For simplicity, you will maintain a global integer value which will be assigned to a buffer whenever a buffer page is used, then, increment the integer. Initially, all buffers will have zero timestamp.</p>
+<p>To implement the MRU algorithm, you will want to maintain the timestamp of each buffer when they are &quot;used&quot;. For simplicity, you will maintain a global integer value which will be assigned to a buffer whenever a buffer page is &quot;used&quot;, then, increment the integer. Initially, all buffers will have zero timestamp.</p>
+<p>When you need to replace a buffer, you scan through the buffers, determine the candidate (not in use) buffers and evict the one with the most recent timestamp. </p>
 <h2 id="print-out-log"><a class="header" href="#print-out-log">Print out log</a></h2>
-<p>To verify the correctness of your implementation, you need to print out the timestamp of all candidates (not in use) buffers: </p>
+<p>To verify the correctness of your implementation, you need to print out the timestamp of all candidates (not in use) buffers as: </p>
 <p><code>Candidate buffers: &lt;a comma separated list of timestamps&gt;</code></p>
-<p>and also explicitly print out the timestamp of the buffer that is going to be replaced:</p>
+<p>and also explicitly print out the timestamp of the buffer that is going to be replaced as:</p>
 <p><code>Replaced buffer: &lt;timestamp&gt;</code></p>
-<p>An example of expected output is shown below. Please note that your output may have different timestamps, different amount of candidates for each replacement. That is all possible. 
+<p>An example of expected output is shown below. Please note that your output may have different timestamps, different amount of candidates for each replacement. That is possible. 
 <img src="./figure/mru.png" alt="mru" /></p>
-<p>You can print out the log with <code>printf</code> function in C programming language. It will print in your <strong>server terminal</strong>. </p>
+<p>You can print out the log with the <code>printf</code> function in C programming language. It will print in your <strong>server terminal</strong>. </p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="lab2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="lab2-0.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -202,7 +177,7 @@ localbuf.c</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="lab2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="lab2-0.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 

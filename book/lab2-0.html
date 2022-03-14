@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - CSCI 4707 lab-book</title>
+        <title>Part 1: Understand Code - CSCI 4707 lab-book</title>
 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html" class="active"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-update.html"><strong aria-hidden="true">4.4.</strong> Important updates</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.5.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab2-0.html"><strong aria-hidden="true">5.1.</strong> Part 1: Understand Code</a></li><li class="chapter-item expanded "><a href="lab2-1.html"><strong aria-hidden="true">5.2.</strong> Part 2: Implement MRU</a></li><li class="chapter-item expanded "><a href="lab2-2.html"><strong aria-hidden="true">5.3.</strong> Part 3: Compile and Test</a></li><li class="chapter-item expanded "><a href="lab2-submit.html"><strong aria-hidden="true">5.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-update.html"><strong aria-hidden="true">4.4.</strong> Important updates</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.5.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab2-0.html" class="active"><strong aria-hidden="true">5.1.</strong> Part 1: Understand Code</a></li><li class="chapter-item expanded "><a href="lab2-1.html"><strong aria-hidden="true">5.2.</strong> Part 2: Implement MRU</a></li><li class="chapter-item expanded "><a href="lab2-2.html"><strong aria-hidden="true">5.3.</strong> Part 3: Compile and Test</a></li><li class="chapter-item expanded "><a href="lab2-submit.html"><strong aria-hidden="true">5.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -145,19 +145,54 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<blockquote>
-<p><i class="trigger fa fa-exclamation-triangle fa-lg"></i>
-Do <strong>NOT</strong> post your project on a public Github repository.</p>
-</blockquote>
-<p>This is the online handout for lab assignments for CSCI4707 at UMN. </p>
+                        <h1 id="part-1-understand-mru-and-code"><a class="header" href="#part-1-understand-mru-and-code">Part 1: Understand MRU and Code</a></h1>
+<h2 id="mru"><a class="header" href="#mru">MRU</a></h2>
+<p>The basic idea of MRU can be seen in <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Most_recently_used_(MRU)">here</a>. However, you will need to adapt the algorithm with the Database buffer management policy concept. </p>
+<h2 id="implement-mru-in-postgresql"><a class="header" href="#implement-mru-in-postgresql">Implement MRU in PostgreSQL</a></h2>
+<p>Most (if not all) of your changes will be located in the directory: <code>$W$/postgresql-14.1/src/backend/storage/buffer/</code>. </p>
+<p>To implement the MRU algorithm, you will want to maintain the timestamp of each buffer when they are &quot;used&quot;. For simplicity, you will maintain a global integer value which will be assigned to a buffer whenever a buffer page is &quot;used&quot;, then, increment the integer. Initially, all buffers will have zero timestamp.</p>
+<p>When you need to replace a buffer, you scan through the buffers, determine the candidate (not in use) buffers and evict the one with the most recent timestamp. </p>
+<h2 id="questions-15-pts"><a class="header" href="#questions-15-pts">Questions (15 pts)</a></h2>
+<p>These questions are designed to let you start early and guide you through the codebase. Answer the following questions on Gradescope. </p>
+<p>Please answer the following questions based on the original code of PostgreSQL 14.1:</p>
+<ol>
+<li>There are five files under <code>$W$/postgresql-14.1/src/backend/storage/buffer/</code>. What is each file's job? Answer in one sentence for each file. (5 pts)</li>
+</ol>
+<ul>
+<li>buf_init.c</li>
+<li>buf_table.c</li>
+<li>bufmgr.c</li>
+<li>freelist.c</li>
+<li>localbuf.c</li>
+</ul>
+<ol start="2">
+<li>
+<p>What is the original buffer replacement policy/algorithm for PostgreSQL? In which file? In which function? From which line to which line? (4 pts)</p>
+</li>
+<li>
+<p>Which part of PostgreSQL code defines the concept &quot;buffer&quot;? In which file? By which class? (2 pts)</p>
+</li>
+<li>
+<p>Where does PostgreSQL &quot;initialize&quot; each buffer? In which file? In which function? (2 pts)</p>
+</li>
+<li>
+<p>Where does PostgreSQL &quot;use&quot; each buffer? In which file? In which function? (2 pts)</p>
+</li>
+</ol>
+<h2 id="submitting-and-grading"><a class="header" href="#submitting-and-grading">Submitting and Grading</a></h2>
+<p>This work is due on Mar. 29, about half way through the whole lab. </p>
+<p>You will get all 15 points if you answer all the questions, regardless their correctness. </p>
+<p>The TA will not give you the correct answer. Instead, the TA will give you correct/wrong feedback. Again, the major goal of the lab is to train your ability to work on (hack into) a real DBMS system, so the TA is not allowed to help you in navigating the source code. </p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="lab2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
-                            <a rel="next" href="machine.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="lab2-1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -167,8 +202,11 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="lab2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
-                    <a rel="next" href="machine.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="lab2-1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

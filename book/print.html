@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-update.html"><strong aria-hidden="true">4.4.</strong> Important updates</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.5.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab2-1.html"><strong aria-hidden="true">5.1.</strong> Part 1: Implement MRU</a></li><li class="chapter-item expanded "><a href="lab2-2.html"><strong aria-hidden="true">5.2.</strong> Part 2: Compile and Test</a></li><li class="chapter-item expanded "><a href="lab2-submit.html"><strong aria-hidden="true">5.3.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-update.html"><strong aria-hidden="true">4.4.</strong> Important updates</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.5.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab2-0.html"><strong aria-hidden="true">5.1.</strong> Part 1: Understand Code</a></li><li class="chapter-item expanded "><a href="lab2-1.html"><strong aria-hidden="true">5.2.</strong> Part 2: Implement MRU</a></li><li class="chapter-item expanded "><a href="lab2-2.html"><strong aria-hidden="true">5.3.</strong> Part 3: Compile and Test</a></li><li class="chapter-item expanded "><a href="lab2-submit.html"><strong aria-hidden="true">5.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -652,19 +652,20 @@ ID:
 Do <strong>NOT</strong> post your project on a public Github repository.</p>
 </blockquote>
 <h2 id="introduction-2"><a class="header" href="#introduction-2">Introduction</a></h2>
-<p>You are going to change the buffer replacement policy that is currently used in PostgreSQL, a major open source DBMS. In particular, the original replacement policy of PostgreSQL is a clocksweep algorithm with LRU (Least Recently Used). In this lab, you are asked to implement an MRU (Most Recently Used) replacement policy without using the clocksweep algorithm.</p>
+<p>You are going to change the buffer replacement policy that is currently used in PostgreSQL. In particular, the original replacement policy of PostgreSQL is a &quot;clock sweep&quot; algorithm with LRU (Least Recently Used). In this lab, you are asked to implement an <strong>MRU</strong> (Most Recently Used) replacement policy without using the &quot;clock sweep&quot; algorithm.</p>
 <h2 id="outline"><a class="header" href="#outline">Outline</a></h2>
 <p>In this lab, you need to:</p>
 <ol>
 <li>Set up PostgreSQL: Same as in Lab 1. If you correctly set up PostgreSQL in Lab1, you are safe to skip this section and jump directly to section. See <a href="./setup.html">Chapter 3</a> if you need to re-install. </li>
-<li>Go through the related code and answer the questions. </li>
-<li>Implement MRU within PostgreSQL: See <a href="./lab2-1.html">5.1</a>.</li>
-<li>Compile and test your changes. See <a href="./lab2-2.html">5.2</a>.</li>
+<li><strong>(Due Mar. 29)</strong> Understand MRU, go through the related code and answer the questions. See <a href="./lab2-0.html">5.1</a>.</li>
+<li>Implement MRU within PostgreSQL. See <a href="./lab2-1.html">5.2</a>.</li>
+<li>Compile and test your changes. See <a href="./lab2-2.html">5.3</a>.</li>
 </ol>
 <h2 id="grading-1"><a class="header" href="#grading-1">Grading</a></h2>
 <ul>
+<li>15 Points <strong>(Due Mar. 29)</strong>: Answer the questions on Gradescope. See <a href="./lab2-0.html">5.1</a> for grading detail. </li>
 <li>20 Points: Your changes must be able to compile without any errors.</li>
-<li>50 Points: The MRU replacement policy including incorporating the printing instructions.</li>
+<li>35 Points: The MRU replacement policy including incorporating the printing instructions.</li>
 <li>30 Points: The quality of your solution.txt.</li>
 </ul>
 <h2 id="note"><a class="header" href="#note">Note</a></h2>
@@ -675,20 +676,27 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <li>Help you in understanding what the assignment wants you to do. </li>
 </ul>
 <p>Unfortunately, the TA is not allowed to help you in navigating the source code (including telling you the functionality of a function or variables) since one of the goals of the lab is to make sure that you understand the source code of the buffer manager in PostgreSQL. Once you understand the source code and know where to make the change, it is very easy to solve the lab.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="part-1-implement-mru"><a class="header" href="#part-1-implement-mru">Part 1: Implement MRU</a></h1>
-<h2 id="most-recent-used"><a class="header" href="#most-recent-used">Most Recent Used</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-1-understand-mru-and-code"><a class="header" href="#part-1-understand-mru-and-code">Part 1: Understand MRU and Code</a></h1>
+<h2 id="mru"><a class="header" href="#mru">MRU</a></h2>
 <p>The basic idea of MRU can be seen in <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Most_recently_used_(MRU)">here</a>. However, you will need to adapt the algorithm with the Database buffer management policy concept. </p>
-<h2 id="phase1"><a class="header" href="#phase1">Phase1</a></h2>
+<h2 id="implement-mru-in-postgresql"><a class="header" href="#implement-mru-in-postgresql">Implement MRU in PostgreSQL</a></h2>
+<p>Most (if not all) of your changes will be located in the directory: <code>$W$/postgresql-14.1/src/backend/storage/buffer/</code>. </p>
+<p>To implement the MRU algorithm, you will want to maintain the timestamp of each buffer when they are &quot;used&quot;. For simplicity, you will maintain a global integer value which will be assigned to a buffer whenever a buffer page is &quot;used&quot;, then, increment the integer. Initially, all buffers will have zero timestamp.</p>
+<p>When you need to replace a buffer, you scan through the buffers, determine the candidate (not in use) buffers and evict the one with the most recent timestamp. </p>
+<h2 id="questions-15-pts"><a class="header" href="#questions-15-pts">Questions (15 pts)</a></h2>
+<p>These questions are designed to let you start early and guide you through the codebase. Answer the following questions on Gradescope. </p>
 <p>Please answer the following questions based on the original code of PostgreSQL 14.1:</p>
 <ol>
-<li>
-<p>There are five files under src/storage/buffer. What are their jobs? Answer in one sentense.
-buf_init.c
-buf_table.c
-bufmgr.c
-freelist.c
-localbuf.c</p>
-</li>
+<li>There are five files under <code>$W$/postgresql-14.1/src/backend/storage/buffer/</code>. What is each file's job? Answer in one sentence for each file. (5 pts)</li>
+</ol>
+<ul>
+<li>buf_init.c</li>
+<li>buf_table.c</li>
+<li>bufmgr.c</li>
+<li>freelist.c</li>
+<li>localbuf.c</li>
+</ul>
+<ol start="2">
 <li>
 <p>What is the original buffer replacement policy/algorithm for PostgreSQL? In which file? In which function? From which line to which line? (4 pts)</p>
 </li>
@@ -696,35 +704,41 @@ localbuf.c</p>
 <p>Which part of PostgreSQL code defines the concept &quot;buffer&quot;? In which file? By which class? (2 pts)</p>
 </li>
 <li>
-<p>Where does PostgreSQL initial each buffer? In which file? In which function? (2 pts)</p>
+<p>Where does PostgreSQL &quot;initialize&quot; each buffer? In which file? In which function? (2 pts)</p>
 </li>
 <li>
-<p>Where does PostgreSQL use each buffer? In which file? In which function? (2 pts)</p>
+<p>Where does PostgreSQL &quot;use&quot; each buffer? In which file? In which function? (2 pts)</p>
 </li>
 </ol>
-<h2 id="implement-mru-in-postgresql"><a class="header" href="#implement-mru-in-postgresql">Implement MRU in PostgreSQL</a></h2>
+<h2 id="submitting-and-grading"><a class="header" href="#submitting-and-grading">Submitting and Grading</a></h2>
+<p>This work is due on Mar. 29, about half way through the whole lab. </p>
+<p>You will get all 15 points if you answer all the questions, regardless their correctness. </p>
+<p>The TA will not give you the correct answer. Instead, the TA will give you correct/wrong feedback. Again, the major goal of the lab is to train your ability to work on (hack into) a real DBMS system, so the TA is not allowed to help you in navigating the source code. </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-2-implement-mru"><a class="header" href="#part-2-implement-mru">Part 2: Implement MRU</a></h1>
+<h2 id="implement-mru-in-postgresql-1"><a class="header" href="#implement-mru-in-postgresql-1">Implement MRU in PostgreSQL</a></h2>
 <p>Most (if not all) of your changes will be located in the directory: <code>$W$/postgresql-14.1/src/backend/storage/buffer/</code>. </p>
-<p>To implement the MRU algorithm, you will want to maintain the timestamp of each buffer when they are used. For simplicity, you will maintain a global integer value which will be assigned to a buffer whenever a buffer page is used, then, increment the integer. Initially, all buffers will have zero timestamp.</p>
+<p>To implement the MRU algorithm, you will want to maintain the timestamp of each buffer when they are &quot;used&quot;. For simplicity, you will maintain a global integer value which will be assigned to a buffer whenever a buffer page is &quot;used&quot;, then, increment the integer. Initially, all buffers will have zero timestamp.</p>
+<p>When you need to replace a buffer, you scan through the buffers, determine the candidate (not in use) buffers and evict the one with the most recent timestamp. </p>
 <h2 id="print-out-log"><a class="header" href="#print-out-log">Print out log</a></h2>
-<p>To verify the correctness of your implementation, you need to print out the timestamp of all candidates (not in use) buffers: </p>
+<p>To verify the correctness of your implementation, you need to print out the timestamp of all candidates (not in use) buffers as: </p>
 <p><code>Candidate buffers: &lt;a comma separated list of timestamps&gt;</code></p>
-<p>and also explicitly print out the timestamp of the buffer that is going to be replaced:</p>
+<p>and also explicitly print out the timestamp of the buffer that is going to be replaced as:</p>
 <p><code>Replaced buffer: &lt;timestamp&gt;</code></p>
-<p>An example of expected output is shown below. Please note that your output may have different timestamps, different amount of candidates for each replacement. That is all possible. 
+<p>An example of expected output is shown below. Please note that your output may have different timestamps, different amount of candidates for each replacement. That is possible. 
 <img src="./figure/mru.png" alt="mru" /></p>
-<p>You can print out the log with <code>printf</code> function in C programming language. It will print in your <strong>server terminal</strong>. </p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="part-2-compile-and-test"><a class="header" href="#part-2-compile-and-test">Part 2: Compile and Test</a></h1>
+<p>You can print out the log with the <code>printf</code> function in C programming language. It will print in your <strong>server terminal</strong>. </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-3-compile-and-test"><a class="header" href="#part-3-compile-and-test">Part 3: Compile and Test</a></h1>
 <h2 id="change-postgresql-config"><a class="header" href="#change-postgresql-config">Change PostgreSQL config</a></h2>
-<p>To test your changes, you will first need to change the memory size of PostgreSQL. Since the test case that is given to you is very small compared to the default memory size of PostgreSQL, it is a good idea to change the memory size in the configuration file of the PostgreSQL. </p>
-<p>The configuration is located in: <code>$W$/install/data/postgresql.conf</code>. You will change the shared_buffer size to shared_buffers = 128kB.</p>
+<p>To test your changes, you will first need to change the memory size of PostgreSQL. Since the test case that is given to you is very small compared to the default memory size of PostgreSQL, it is a good idea to config the memory to a smaller size. </p>
+<p>The configuration is located in: <code>$W$/install/data/postgresql.conf</code>. You will change the <strong>shared_buffer</strong> size to <strong>shared_buffers = 128kB</strong>.</p>
 <h2 id="compile-your-changes"><a class="header" href="#compile-your-changes">Compile your changes</a></h2>
 <p>To compile your changes, you must run the following three commands from the source directory, i.e., <code>$W$/postgresql-14.1</code>. Remember to shutdown your server before you make a new compiling:</p>
 <ol>
-<li>Clean the executable.</li>
+<li>Clean previous make.</li>
 </ol>
 <pre><code>make clean</code></pre>
 <ol start="2">
-<li>Remake</li>
+<li>Make</li>
 </ol>
 <pre><code>make</code></pre>
 <ol start="3">
@@ -733,11 +747,67 @@ localbuf.c</p>
 <pre><code>make install</code></pre>
 <p>If you get no error in this process, you will be able to start and server and client and test your changes. </p>
 <h2 id="test-your-changes"><a class="header" href="#test-your-changes">Test your changes</a></h2>
-<h3 id="1-get-test-data"><a class="header" href="#1-get-test-data">1. Get test data</a></h3>
-<p>Download test data </p>
+<p>You need two files to run the test:</p>
+<ul>
+<li><code>values10k.dat</code>: contains the data to be inserted into PostgreSQL.</li>
+<li><code>buffer_add.sql</code>: contains the sql to do the insertion.</li>
+</ul>
+<p>Download these two files to somewhere with following commands:</p>
 <pre><code>wget https://csci4707-umn.github.io/lab-book/resource/lab2/values10k.dat && wget https://csci4707-umn.github.io/lab-book/resource/lab2/buffer_add.sql</code></pre>
-<p>To test your change, run the test_data/buffer_add.sql file and look at the replaced buffer’s timestamp compared to all other candidate buffers’ timestamp. In order to run buffer_add.sql, you need to make one modification to the file. Please make sure you change the path of test_data/values10k.dat file according to its location.</p>
+<p>You will test your change by inserting data into the database and look at the replaced buffer’s timestamp compared to all other candidate buffers’ timestamp. </p>
+<p>To insert the data to the database, you need:</p>
+<ol>
+<li>In <code>buffer_add.sql</code>, update the <code>&lt;PATH_TO_values10k.dat&gt;</code> to the real path to <code>values10k.dat</code> on your test machine. </li>
+<li>Start the server and the <code>psql</code>.</li>
+<li>In <code>psql</code>, execute <code>buffer_add.sql</code> with following command, remember to replace <code>&lt;PATH_TO_buffer_add.sql&gt;</code> to the real path to <code>buffer_add.sql</code> on your test machine. </li>
+</ol>
+<pre><code>\i  &#60;PATH_TO_buffer_add.sql &#62;</code></pre>
+<p>An example of running the test is shown below. The terminal on the right is the server terminal and the terminal on the left is the client terminal. 
+<img src="./figure/mru-test.png" alt="mru-test" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="submit-guidance"><a class="header" href="#submit-guidance">Submit Guidance</a></h1>
+<blockquote>
+<p><i class="trigger fa fa-exclamation-triangle fa-lg"></i>
+Do <strong>NOT</strong> post your project on a public Github repository.</p>
+</blockquote>
+<p>Remember this lab has <strong>two</strong> dues:</p>
+<ul>
+<li>Phase 1 (Due Mar. 29): Answer the questions on Gradescope.</li>
+<li>Phase 2 (Due Apr. 14): Submit you implementation. There will be a 10% penalty off your grade for a 24-hour late submission.</li>
+</ul>
+<h2 id="phase-1-submission"><a class="header" href="#phase-1-submission">Phase 1 submission</a></h2>
+<p>See <a href="./lab2-0.html#submitting-and-grading">5.1</a></p>
+<h2 id="phase-2-submission"><a class="header" href="#phase-2-submission">Phase 2 submission</a></h2>
+<p><strong>Only one</strong> submission is needed for group work. </p>
+<p>You must submit a zip file named <code>&lt;x.500&gt;.zip</code>. Your zip file should unzip to a following structure:</p>
+<pre><code>&lt;x.500&gt;/
+├── solution.txt
+└── changes
+    ├── foo.c
+    ├── bar.c
+    └── foo.h
+</code></pre>
+<ol>
+<li><code>changes</code>: A folder that contains all files that you have changed in order to fulfill the lab. Please only submit the file itself (don’t include the directory). For example: if you change a file in <code>src/backend/foo.c</code>, only put <code>foo.c</code> in the folder.</li>
+<li><code>solution.txt</code>: Modify the solution.txt template below as per your changes. List all group members at the very beginning of this file. </li>
+</ol>
+<pre><code>Students:
+1. &lt;Student 1 Full Name&gt; (&lt;Student 1 x500&gt;)
+2. &lt;Student 2 Full Name&gt; (&lt;Student 2 x500&gt;)
+2. &lt;Student 3 Full Name&gt; (&lt;Student 3 x500&gt;)
+
+Brief Summary:
+&lt;A Brief Summary about the change you make (1 Paragraph max)&gt;
+
+Detailed Changes:
+1. &lt;Modified File 1&gt;: &lt;The path of the modified file from src directory&gt;
+	- &lt;Detailed changes of the file&gt;.
+	For example: In line xxx, I make a change so that the buffer will do........
+	
+2. &lt;Modified File 2&gt;: &lt;Path from src&gt;
+	- &lt;Detailed changes of the file&gt;.
+
+</code></pre>
+<p>Each violation to the submission guideline will result in a <strong>10%</strong> penalty.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lab-3"><a class="header" href="#lab-3">Lab 3</a></h1>
 
                     </main>
