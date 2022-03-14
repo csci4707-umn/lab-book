@@ -4,8 +4,8 @@
 > Do **NOT** post your project on a public Github repository.
 
 Remember this lab has **two** dues:
-- Phase 1 (Due Mar. 29): Answer the questions on Gradescope.
-- Phase 2 (Due Apr. 14): Submit you implementation. There will be a 10% penalty off your grade for a 24-hour late submission.
+- Phase 1 (Due Mar 29): Answer the questions on Gradescope.
+- Phase 2 (Due Apr 14): Submit you implementation. There will be a 10% penalty off your grade for a 24-hour late submission.
 
 
 ## Phase 1 submission (Due Mar 29)
