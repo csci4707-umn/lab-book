@@ -23,4 +23,11 @@ To compile your changes, you must run the following three commands from the sour
 If you get no error in this process, you will be able to start and server and client and test your changes. 
 
 ## Test your changes
+
+### 1. Get test data
+Download test data 
+
+<pre><code>wget https://csci4707-umn.github.io/lab-book/resource/lab2/values10k.dat && wget https://csci4707-umn.github.io/lab-book/resource/lab2/buffer_add.sql</code></pre>
+
+
 To test your change, run the test_data/buffer_add.sql file and look at the replaced buffer’s timestamp compared to all other candidate buffers’ timestamp. In order to run buffer_add.sql, you need to make one modification to the file. Please make sure you change the path of test_data/values10k.dat file according to its location.
