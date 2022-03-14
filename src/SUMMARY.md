@@ -13,7 +13,10 @@
   - [Part 3: SQL Updates and Deletes](./lab1-3.md)
   - [Important updates](./lab1-update.md)
   - [Submit Guidance](./lab1-submit.md)
-- [Lab 2](./lab2.md)  
+- [Lab 2](./lab2.md)
+  - [Part 1: Implement MRU](./lab2-1.md)
+  - [Part 2: Compile and Test](./lab2-2.md)
+  - [Submit Guidance](./lab2-submit.md)
 - [Lab 3](./lab3.md)
 
     
