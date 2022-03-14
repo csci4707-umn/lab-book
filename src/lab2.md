@@ -8,13 +8,13 @@ You are going to change the buffer replacement policy that is currently used in 
 
 ## Outline
 In this lab, you need to:
-1. Set up PostgreSQL: Same as in Lab 1. If you correctly set up PostgreSQL in Lab1, you are safe to skip this section and jump directly to section. See [Chapter 3](./setup.md) if you need to re-install. 
-2. **(Due Mar. 29)** Understand MRU, go through the related code and answer the questions. See [5.1](./lab2-0.md).
+1. Set up PostgreSQL: Same as in Lab 1. If you correctly set up PostgreSQL in Lab1, you are safe to skip this section. See [Chapter 3](./setup.md) if you need to re-install. 
+2. **(Due Mar 29)** Understand MRU, go through the related code and answer the questions. See [5.1](./lab2-0.md).
 3. Implement MRU within PostgreSQL. See [5.2](./lab2-1.md).
 4. Compile and test your changes. See [5.3](./lab2-2.md).
 
 ## Grading
-- 15 Points **(Due Mar. 29)**: Answer the questions on Gradescope. See [5.1](./lab2-0.md) for grading detail. 
+- 15 Points **(Due Mar 29)**: Answer the questions on Gradescope. See [5.1](./lab2-0.md) for grading detail. 
 - 20 Points: Your changes must be able to compile without any errors.
 - 35 Points: The MRU replacement policy including incorporating the printing instructions.
 - 30 Points: The quality of your solution.txt.

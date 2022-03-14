@@ -8,10 +8,10 @@ Remember this lab has **two** dues:
 - Phase 2 (Due Apr. 14): Submit you implementation. There will be a 10% penalty off your grade for a 24-hour late submission.
 
 
-## Phase 1 submission
+## Phase 1 submission (Due Mar 29)
 See [5.1](./lab2-0.md#submitting-and-grading)
 
-## Phase 2 submission
+## Phase 2 submission (Due Apr 14)
 **Only one** submission is needed for group work. 
 
 You must submit a zip file named `<x.500>.zip`. Your zip file should unzip to a following structure:

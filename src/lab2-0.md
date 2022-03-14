@@ -1,17 +1,17 @@
 # Part 1: Understand MRU and Code
 
 ## MRU
-The basic idea of MRU can be seen in [here](https://en.wikipedia.org/wiki/Cache_replacement_policies#Most_recently_used_(MRU)). However, you will need to adapt the algorithm with the Database buffer management policy concept. 
+The basic idea of MRU can be seen in [here](https://en.wikipedia.org/wiki/Cache_replacement_policies#Most_recently_used_(MRU)). However, you will need to adapt the algorithm with the database buffer management policy concept. 
 
 ## Implement MRU in PostgreSQL
 Most (if not all) of your changes will be located in the directory: `$W$/postgresql-14.1/src/backend/storage/buffer/`. 
 
 To implement the MRU algorithm, you will want to maintain the timestamp of each buffer when they are "used". For simplicity, you will maintain a global integer value which will be assigned to a buffer whenever a buffer page is "used", then, increment the integer. Initially, all buffers will have zero timestamp.
 
-When you need to replace a buffer, you scan through the buffers, determine the candidate (not in use) buffers and evict the one with the most recent timestamp. 
+When you need to replace a buffer, you scan the buffers, determine the candidate (not in use) buffers and evict the one with the most recent timestamp. 
 
 ## Questions (15 pts)
-These questions are designed to let you start early and guide you through the codebase. Answer the following questions on Gradescope. 
+These questions are designed to let you start early and guide you through the codebase. Answer the following questions on Gradescope. This work is due on **Mar 29**.
 
 Please answer the following questions based on the original code of PostgreSQL 14.1:
 
@@ -31,7 +31,7 @@ Please answer the following questions based on the original code of PostgreSQL 1
 5. Where does PostgreSQL "use" each buffer? In which file? In which function? (2 pts)
 
 ## Submitting and Grading
-This work is due on Mar. 29, about half way through the whole lab. Only **one** submission is needed for each group. 
+This work is due on **Mar 29**, about half way through the whole lab. Only **one** submission is needed for each group. 
 
 You will get all 15 points if you answer all the questions, regardless their correctness. 
 

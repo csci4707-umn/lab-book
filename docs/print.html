@@ -656,14 +656,14 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <h2 id="outline"><a class="header" href="#outline">Outline</a></h2>
 <p>In this lab, you need to:</p>
 <ol>
-<li>Set up PostgreSQL: Same as in Lab 1. If you correctly set up PostgreSQL in Lab1, you are safe to skip this section and jump directly to section. See <a href="./setup.html">Chapter 3</a> if you need to re-install. </li>
-<li><strong>(Due Mar. 29)</strong> Understand MRU, go through the related code and answer the questions. See <a href="./lab2-0.html">5.1</a>.</li>
+<li>Set up PostgreSQL: Same as in Lab 1. If you correctly set up PostgreSQL in Lab1, you are safe to skip this section. See <a href="./setup.html">Chapter 3</a> if you need to re-install. </li>
+<li><strong>(Due Mar 29)</strong> Understand MRU, go through the related code and answer the questions. See <a href="./lab2-0.html">5.1</a>.</li>
 <li>Implement MRU within PostgreSQL. See <a href="./lab2-1.html">5.2</a>.</li>
 <li>Compile and test your changes. See <a href="./lab2-2.html">5.3</a>.</li>
 </ol>
 <h2 id="grading-1"><a class="header" href="#grading-1">Grading</a></h2>
 <ul>
-<li>15 Points <strong>(Due Mar. 29)</strong>: Answer the questions on Gradescope. See <a href="./lab2-0.html">5.1</a> for grading detail. </li>
+<li>15 Points <strong>(Due Mar 29)</strong>: Answer the questions on Gradescope. See <a href="./lab2-0.html">5.1</a> for grading detail. </li>
 <li>20 Points: Your changes must be able to compile without any errors.</li>
 <li>35 Points: The MRU replacement policy including incorporating the printing instructions.</li>
 <li>30 Points: The quality of your solution.txt.</li>
@@ -678,13 +678,13 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <p>Unfortunately, the TA is not allowed to help you in navigating the source code (including telling you the functionality of a function or variables) since one of the goals of the lab is to make sure that you understand the source code of the buffer manager in PostgreSQL. Once you understand the source code and know where to make the change, it is very easy to solve the lab.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="part-1-understand-mru-and-code"><a class="header" href="#part-1-understand-mru-and-code">Part 1: Understand MRU and Code</a></h1>
 <h2 id="mru"><a class="header" href="#mru">MRU</a></h2>
-<p>The basic idea of MRU can be seen in <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Most_recently_used_(MRU)">here</a>. However, you will need to adapt the algorithm with the Database buffer management policy concept. </p>
+<p>The basic idea of MRU can be seen in <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Most_recently_used_(MRU)">here</a>. However, you will need to adapt the algorithm with the database buffer management policy concept. </p>
 <h2 id="implement-mru-in-postgresql"><a class="header" href="#implement-mru-in-postgresql">Implement MRU in PostgreSQL</a></h2>
 <p>Most (if not all) of your changes will be located in the directory: <code>$W$/postgresql-14.1/src/backend/storage/buffer/</code>. </p>
 <p>To implement the MRU algorithm, you will want to maintain the timestamp of each buffer when they are &quot;used&quot;. For simplicity, you will maintain a global integer value which will be assigned to a buffer whenever a buffer page is &quot;used&quot;, then, increment the integer. Initially, all buffers will have zero timestamp.</p>
-<p>When you need to replace a buffer, you scan through the buffers, determine the candidate (not in use) buffers and evict the one with the most recent timestamp. </p>
+<p>When you need to replace a buffer, you scan the buffers, determine the candidate (not in use) buffers and evict the one with the most recent timestamp. </p>
 <h2 id="questions-15-pts"><a class="header" href="#questions-15-pts">Questions (15 pts)</a></h2>
-<p>These questions are designed to let you start early and guide you through the codebase. Answer the following questions on Gradescope. </p>
+<p>These questions are designed to let you start early and guide you through the codebase. Answer the following questions on Gradescope. This work is due on <strong>Mar 29</strong>.</p>
 <p>Please answer the following questions based on the original code of PostgreSQL 14.1:</p>
 <ol>
 <li>There are five files under <code>$W$/postgresql-14.1/src/backend/storage/buffer/</code>. What is each file's job? Answer for each file in one sentence. (5 pts)</li>
@@ -711,7 +711,7 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 </li>
 </ol>
 <h2 id="submitting-and-grading"><a class="header" href="#submitting-and-grading">Submitting and Grading</a></h2>
-<p>This work is due on Mar. 29, about half way through the whole lab. Only <strong>one</strong> submission is needed for each group. </p>
+<p>This work is due on <strong>Mar 29</strong>, about half way through the whole lab. Only <strong>one</strong> submission is needed for each group. </p>
 <p>You will get all 15 points if you answer all the questions, regardless their correctness. </p>
 <p>The TA will not give you the correct answer. Instead, the TA will give you correct/wrong feedback. Again, the major goal of the lab is to train your ability to work on (hack into) a real DBMS system, so the TA is not allowed to help you in navigating the source code. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="part-2-implement-mru"><a class="header" href="#part-2-implement-mru">Part 2: Implement MRU</a></h1>
@@ -729,8 +729,8 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <p>You can print out the log with the <code>printf</code> function in C programming language. It will print in your <strong>server terminal</strong>. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="part-3-compile-and-test"><a class="header" href="#part-3-compile-and-test">Part 3: Compile and Test</a></h1>
 <h2 id="change-postgresql-config"><a class="header" href="#change-postgresql-config">Change PostgreSQL config</a></h2>
-<p>To test your changes, you will first need to change the memory size of PostgreSQL. Since the test case that is given to you is very small compared to the default memory size of PostgreSQL, it is a good idea to config the memory to a smaller size. </p>
-<p>The configuration is located in: <code>$W$/install/data/postgresql.conf</code>. You will change the <strong>shared_buffer</strong> size to <strong>shared_buffers = 128kB</strong>.</p>
+<p>To test your changes, you first need to change the memory size of PostgreSQL. Since the test case given to you is very small compared to the default memory size of PostgreSQL, it is a good idea to config the memory to a smaller size. </p>
+<p>The configuration is located in: <code>$W$/install/data/postgresql.conf</code>. You need to change the <strong>shared_buffer</strong> size to <strong>shared_buffers = 128kB</strong>.</p>
 <h2 id="compile-your-changes"><a class="header" href="#compile-your-changes">Compile your changes</a></h2>
 <p>To compile your changes, you must run the following three commands from the source directory, i.e., <code>$W$/postgresql-14.1</code>. Remember to shutdown your server before you make a new compiling:</p>
 <ol>
@@ -738,7 +738,7 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 </ol>
 <pre><code>make clean</code></pre>
 <ol start="2">
-<li>Make</li>
+<li>Make.</li>
 </ol>
 <pre><code>make</code></pre>
 <ol start="3">
@@ -754,12 +754,12 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 </ul>
 <p>Download these two files to somewhere with following commands:</p>
 <pre><code>wget https://csci4707-umn.github.io/lab-book/resource/lab2/values10k.dat && wget https://csci4707-umn.github.io/lab-book/resource/lab2/buffer_add.sql</code></pre>
-<p>You will test your change by inserting data into the database and look at the replaced buffer’s timestamp compared to all other candidate buffers’ timestamp. </p>
+<p>You will test your change by inserting data into the database and looking at the replaced buffer’s timestamp compared to all other candidate buffers’ timestamp. </p>
 <p>To insert the data to the database, you need:</p>
 <ol>
 <li>In <code>buffer_add.sql</code>, update the <code>&lt;PATH_TO_values10k.dat&gt;</code> to the real path to <code>values10k.dat</code> on your test machine. </li>
 <li>Start the server and the <code>psql</code>.</li>
-<li>In <code>psql</code>, execute <code>buffer_add.sql</code> with following command, remember to replace <code>&lt;PATH_TO_buffer_add.sql&gt;</code> to the real path to <code>buffer_add.sql</code> on your test machine. </li>
+<li>In <code>psql</code>, execute <code>buffer_add.sql</code> with following command. Remember to replace <code>&lt;PATH_TO_buffer_add.sql&gt;</code> to the real path to <code>buffer_add.sql</code> on your test machine. </li>
 </ol>
 <pre><code>\i  &#60;PATH_TO_buffer_add.sql &#62;</code></pre>
 <p>An example of running the test is shown below. The terminal on the right is the server terminal and the terminal on the left is the client terminal. 
@@ -774,9 +774,9 @@ Do <strong>NOT</strong> post your project on a public Github repository.</p>
 <li>Phase 1 (Due Mar. 29): Answer the questions on Gradescope.</li>
 <li>Phase 2 (Due Apr. 14): Submit you implementation. There will be a 10% penalty off your grade for a 24-hour late submission.</li>
 </ul>
-<h2 id="phase-1-submission"><a class="header" href="#phase-1-submission">Phase 1 submission</a></h2>
+<h2 id="phase-1-submission-due-mar-29"><a class="header" href="#phase-1-submission-due-mar-29">Phase 1 submission (Due Mar 29)</a></h2>
 <p>See <a href="./lab2-0.html#submitting-and-grading">5.1</a></p>
-<h2 id="phase-2-submission"><a class="header" href="#phase-2-submission">Phase 2 submission</a></h2>
+<h2 id="phase-2-submission-due-apr-14"><a class="header" href="#phase-2-submission-due-apr-14">Phase 2 submission (Due Apr 14)</a></h2>
 <p><strong>Only one</strong> submission is needed for group work. </p>
 <p>You must submit a zip file named <code>&lt;x.500&gt;.zip</code>. Your zip file should unzip to a following structure:</p>
 <pre><code>&lt;x.500&gt;/
