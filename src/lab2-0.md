@@ -35,4 +35,4 @@ This work is due on **Mar 29**, about half way through the whole lab. Only **one
 
 You will get all 15 points if you answer all the questions, regardless their correctness. 
 
-The TA will not give you the correct answer. Instead, the TA will give you correct/wrong feedback. Again, the major goal of the lab is to train your ability to work on (hack into) a real DBMS system, so the TA is not allowed to help you in navigating the source code. 
+The TA will not give you the correct answer. Again, the major goal of the lab is to train your ability to work on (hack into) a real DBMS system, so the TA is not allowed to help you in navigating the source code. 
