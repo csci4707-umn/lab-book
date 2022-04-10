@@ -1,4 +1,4 @@
-drop table test_table;
+drop table if exists test_table;
 
 CREATE TABLE test_table (id serial, PRIMARY KEY (id), value1 int not null, value2 int not null, value3 real, value4 real);
 
