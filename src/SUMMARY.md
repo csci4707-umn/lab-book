@@ -19,5 +19,9 @@
   - [Part 3: Compile and Test](./lab2-2.md)
   - [Submit Guidance](./lab2-submit.md)
 - [Lab 3](./lab3.md)
+  - [Part 1: Download and Import Data](./lab3-1.md)
+  - [Part 2: Single Table Lookup Performance](./lab3-2.md)
+  - [Part 3: Joining Performance](./lab3-3.md)
+  - [Submit Guidance](./lab3-submit.md)
 
     

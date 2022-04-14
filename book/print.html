@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-update.html"><strong aria-hidden="true">4.4.</strong> Important updates</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.5.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab2-0.html"><strong aria-hidden="true">5.1.</strong> Part 1: Understand Code</a></li><li class="chapter-item expanded "><a href="lab2-1.html"><strong aria-hidden="true">5.2.</strong> Part 2: Implement MRU</a></li><li class="chapter-item expanded "><a href="lab2-2.html"><strong aria-hidden="true">5.3.</strong> Part 3: Compile and Test</a></li><li class="chapter-item expanded "><a href="lab2-submit.html"><strong aria-hidden="true">5.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="machine.html"><strong aria-hidden="true">2.</strong> Connect to CSE Lab machines</a></li><li class="chapter-item expanded "><a href="setup.html"><strong aria-hidden="true">3.</strong> Setup PostgreSQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="run.html"><strong aria-hidden="true">3.2.</strong> Run PostgreSQL</a></li><li class="chapter-item expanded "><a href="psql.html"><strong aria-hidden="true">3.3.</strong> PostgreSQL 101</a></li><li class="chapter-item expanded "><a href="troubleshooting.html"><strong aria-hidden="true">3.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="lab1.html"><strong aria-hidden="true">4.</strong> Lab 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab1-1.html"><strong aria-hidden="true">4.1.</strong> Part 1: ProjectDB Schema Creation</a></li><li class="chapter-item expanded "><a href="lab1-2.html"><strong aria-hidden="true">4.2.</strong> Part 2: SQL Queries</a></li><li class="chapter-item expanded "><a href="lab1-3.html"><strong aria-hidden="true">4.3.</strong> Part 3: SQL Updates and Deletes</a></li><li class="chapter-item expanded "><a href="lab1-update.html"><strong aria-hidden="true">4.4.</strong> Important updates</a></li><li class="chapter-item expanded "><a href="lab1-submit.html"><strong aria-hidden="true">4.5.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab2.html"><strong aria-hidden="true">5.</strong> Lab 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab2-0.html"><strong aria-hidden="true">5.1.</strong> Part 1: Understand Code</a></li><li class="chapter-item expanded "><a href="lab2-1.html"><strong aria-hidden="true">5.2.</strong> Part 2: Implement MRU</a></li><li class="chapter-item expanded "><a href="lab2-2.html"><strong aria-hidden="true">5.3.</strong> Part 3: Compile and Test</a></li><li class="chapter-item expanded "><a href="lab2-submit.html"><strong aria-hidden="true">5.4.</strong> Submit Guidance</a></li></ol></li><li class="chapter-item expanded "><a href="lab3.html"><strong aria-hidden="true">6.</strong> Lab 3</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lab3-1.html"><strong aria-hidden="true">6.1.</strong> Part 1: Download and Import Data</a></li><li class="chapter-item expanded "><a href="lab3-2.html"><strong aria-hidden="true">6.2.</strong> Part 2: Single Table Lookup Performance</a></li><li class="chapter-item expanded "><a href="lab3-3.html"><strong aria-hidden="true">6.3.</strong> Part 3: Joining Performance</a></li><li class="chapter-item expanded "><a href="lab3-submit.html"><strong aria-hidden="true">6.4.</strong> Submit Guidance</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -809,6 +809,130 @@ Detailed Changes:
 </code></pre>
 <p>Each violation to the submission guideline will result in a <strong>10%</strong> penalty.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lab-3"><a class="header" href="#lab-3">Lab 3</a></h1>
+<h2 id="introduction-3"><a class="header" href="#introduction-3">Introduction</a></h2>
+<p>In this lab, you should work on a <strong>clean, unmodified</strong> installation of PostgreSQL.</p>
+<p>You will play with PostgreSQL as a black box. You will not be required to write code or modify anything in the PostgreSQL. Instead, you will do some experiments with large dataset and study the performance of different indexing structures. If you need to re-install PostgreSQL, follow the installation in <a href="./setup.html">Setup PostgreSQL</a>.</p>
+<h2 id="outline-1"><a class="header" href="#outline-1">Outline</a></h2>
+<p>In this lab, you need to finish the <a href="">lab report</a> while doing the following steps:</p>
+<ol>
+<li>Download and import the data. See <a href="./lab3-1.html">6.1</a></li>
+<li>Do test on single table lookup performance. See <a href="./lab3-2.html">6.2</a></li>
+<li>Do test on joining performance. See <a href="./lab3-3.html">6.3</a></li>
+<li>Submit a <strong>PDF</strong> for your lab report. </li>
+</ol>
+<h2 id="grading-2"><a class="header" href="#grading-2">Grading</a></h2>
+<p>See in lab report. </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-1-download-and-import-data"><a class="header" href="#part-1-download-and-import-data">Part 1: Download and Import Data</a></h1>
+<h2 id="data-overview"><a class="header" href="#data-overview">Data Overview</a></h2>
+<p>In this lab, you will use the data of bike station and trip information in 2020 and 2021 from <a href="https://niceridemn.com/">NiceRide</a> in Minneapolis, MN. </p>
+<p>There are two tables in the dataset: <strong>station</strong> and <strong>trip</strong>.</p>
+<p>A preview of the <strong>station</strong> table:</p>
+<table><thead><tr><th>station_id</th><th>station_name</th></tr></thead><tbody>
+<tr><td>2</td><td>100 Main Street SE</td></tr>
+<tr><td>3</td><td>25th Street &amp; 33rd Ave S</td></tr>
+<tr><td>4</td><td>Riverside Ave &amp; 23rd Ave S</td></tr>
+</tbody></table>
+<p>A preview of the <strong>trip</strong> table:</p>
+<table><thead><tr><th>ride_id</th><th>rideable_type</th><th>started_at</th><th>ended_at</th><th>start_station_id</th><th>end_station_id</th><th>member_casual</th></tr></thead><tbody>
+<tr><td>79E701EBAF3B7202</td><td>docked_bike</td><td>2020-04-01 13:47:57</td><td>2020-04-01 13:58:29</td><td>609</td><td>30009</td><td>casual</td></tr>
+<tr><td>44BCCB23A8E3F931</td><td>electric_bike</td><td>2020-06-09 11:09:03</td><td>2020-06-09 11:34:12</td><td>19</td><td>858</td><td>casual</td></tr>
+<tr><td>50865B1EE60388DF</td><td>classic_bike</td><td>2020-10-22 15:17:43</td><td>2020-10-22 15:19:56</td><td>189</td><td>189</td><td>member</td></tr>
+</tbody></table>
+<p>We <strong>do not</strong> specify any primary keys or foreign keys for these two tables. The reason is that we want to start the experiment without any index, but <a href="https://www.postgresql.org/docs/14/indexes-unique.html">&quot;PostgreSQL automatically creates a unique index when a unique constraint or primary key is defined for a table.&quot;</a> Conceptually, </p>
+<p>For <strong>station</strong> table, there is:</p>
+<ul>
+<li>station_id PRIMARY KEY</li>
+</ul>
+<p>For <strong>trip</strong> table, there is:</p>
+<ul>
+<li>ride_id PRIMARY KEY</li>
+<li>start_station_id FOREIGN KEY REFERENCES station(station_id)</li>
+<li>end_station_id FOREIGN KEY REFERENCES station(station_id)</li>
+</ul>
+<h2 id="download-and-import"><a class="header" href="#download-and-import">Download and Import</a></h2>
+<p>To download the dataset, run following command in terminal:</p>
+<pre><code>wget https://csci4707-umn.github.io/lab-book/resource/lab3/bike_dump.sql</code></pre>
+<p>To import the dataset, enter <strong>psql</strong> and run following PostgreSQL command:</p>
+<pre><code>\i  &#60;PATH_TO_bike_dump.sql&#62;</code></pre>
+<p>To verify a correct importing, use following PostgreSQL command to display all tables in the database:</p>
+<pre><code>\d</code></pre>
+<p>You should see following list of relations. </p>
+<p><img src="./figure/display.png" alt="display" /></p>
+<blockquote>
+<p><strong>!! Important !!</strong> We create two replicas for <strong>trip</strong> table, namely <strong>trip_hash</strong> and <strong>trip_btree</strong>. You will create hash and btree index on these two tables respectively. In order to a fair comparison, do not create two indexes on one table. </p>
+</blockquote>
+<p>To explore the data type for each column, run following PostgreSQL command in <strong>psql</strong>:</p>
+<pre><code>\d  &#60;table_name&#62;</code></pre>
+<p>For example, <code>\d station</code></p>
+<p><img src="./figure/describe.png" alt="describe" /></p>
+<h2 id="finish-lab-report"><a class="header" href="#finish-lab-report">Finish Lab Report</a></h2>
+<p><span style="color: red;">Answer question 1.1 in lab report.</span></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-2-single-table-lookup-performance"><a class="header" href="#part-2-single-table-lookup-performance">Part 2: Single Table Lookup Performance</a></h1>
+<h2 id="important-command"><a class="header" href="#important-command">Important Command</a></h2>
+<p>To show each query's execution plan and measure its execution time, add <strong>EXPLAIN ANALYZE</strong> in front of each query. See <a href="https://www.postgresql.org/docs/current/sql-explain.html">document</a> for examples. </p>
+<p>For example, </p>
+<pre><code>EXPLAIN ANALYZE SELECT * FROM trip;</code></pre>
+<h2 id="test-queries"><a class="header" href="#test-queries">Test Queries</a></h2>
+<p>You will need to find how index affects performance on the following queries:</p>
+<ol>
+<li>(equality search) Find all trips (use select *) with start_station_id = 30001.</li>
+<li>(range search) Find all trips (use select *) with start_station_id greater than 30001 and less than 30010.</li>
+</ol>
+<p>Run both queries <strong>multiple times</strong> in each of the following test. Observe its <strong>QUERY PLAN</strong> and compute its average <strong>Execution Time</strong>.</p>
+<p><span style="color: red;">Answer question 2.1 in lab report.</span></p>
+<h2 id="test-1-no-index"><a class="header" href="#test-1-no-index">Test 1: No index</a></h2>
+<p>Test the two queries against the <strong>trip</strong> table. </p>
+<p><span style="color: red;">Answer question 2.2 in lab report.</span></p>
+<h2 id="test-2-hash-index"><a class="header" href="#test-2-hash-index">Test 2: Hash index</a></h2>
+<p>First, create a hash index for table <strong>trip_hash</strong> on column <strong>start_station_id</strong> using following command (<a href="https://www.postgresql.org/docs/current/indexes-types.html">Reference</a>):</p>
+<pre><code>CREATE INDEX &#60;index_name&#62; ON &#60;table_name&#62; USING HASH (&#60;column_name&#62;);</code></pre>
+<p>For example,</p>
+<pre><code>CREATE INDEX trip_hash_index ON trip_hash USING HASH (start_station_id);</code></pre>
+<p>Test the two queries against the <strong>trip_hash</strong> table.</p>
+<p><span style="color: red;">Answer question 2.3 in lab report.</span></p>
+<h2 id="test-3-b-tree"><a class="header" href="#test-3-b-tree">Test 3: B-tree</a></h2>
+<p>First, create a b-tree index for table <strong>trip_btree</strong> on column <strong>start_station_id</strong> using following command (<a href="https://www.postgresql.org/docs/current/sql-createindex.html">Reference</a>):</p>
+<pre><code>CREATE INDEX &#60;index_name&#62; ON &#60;table_name&#62;(&#60;column_name&#62;);</code></pre>
+<p>For example,</p>
+<pre><code>CREATE INDEX trip_btree_index ON trip_btree (start_station_id);</code></pre>
+<p>Test the two queries against the <strong>trip_btree</strong> table.</p>
+<p><span style="color: red;">Answer question 2.4 in lab report.</span></p>
+<h2 id="test-4-clustered-b-tree"><a class="header" href="#test-4-clustered-b-tree">Test 4: Clustered b-tree</a></h2>
+<p>Creating b-tree index does not cluster the data by default. To cluster the data, use following command (<a href="https://www.postgresql.org/docs/14/sql-cluster.html">Reference</a>):</p>
+<pre><code>CLUSTER &#60;index_name&#62; ON &#60;table_name&#62;;</code></pre>
+<p>For example,</p>
+<pre><code>CLUSTER trip_btree_index ON trip_btree;</code></pre>
+<p>Test the two queries against the <strong>trip_btree</strong> table again.</p>
+<p><span style="color: red;">Answer question 2.5 in lab report.</span></p>
+<h2 id="finish-lab-report-1"><a class="header" href="#finish-lab-report-1">Finish Lab Report</a></h2>
+<p><span style="color: red;">Answer question 2.1 - 2.6 in lab report.</span></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-3-joining-performance"><a class="header" href="#part-3-joining-performance">Part 3: Joining Performance</a></h1>
+<!-- EXPLAIN ANALYZE
+SELECT T.*
+FROM trip T, station S
+WHERE S.station_name = 'Coffman Union'
+  AND T.start_station_id = S.station_id; -->
+<h2 id="test-queries-1"><a class="header" href="#test-queries-1">Test Queries</a></h2>
+<p>You will need to find how index affects join performance using following query:</p>
+<ol>
+<li>Find all trips start from the station <strong>Coffman Union</strong>.</li>
+</ol>
+<p>You will keep the table <strong>station</strong> un-indexed and use different <strong>trip</strong> tables and indexes that you created in <a href="./lab3-2.html">Part2</a> to test the join performance. </p>
+<p><span style="color: red;">Answer question 3.1 in lab report.</span></p>
+<h2 id="test-1-no-index-1"><a class="header" href="#test-1-no-index-1">Test 1: No index</a></h2>
+<p>Test the join against the <strong>trip</strong> table. </p>
+<p><span style="color: red;">Answer question 3.2 in lab report.</span></p>
+<h2 id="test-2-hash-index-1"><a class="header" href="#test-2-hash-index-1">Test 2: Hash index</a></h2>
+<p>Test the join against <strong>trip_hash</strong> table. </p>
+<p><span style="color: red;">Answer question 3.3 in lab report.</span></p>
+<h2 id="test-3-b-tree-index-clustered"><a class="header" href="#test-3-b-tree-index-clustered">Test 3: B-tree index (clustered)</a></h2>
+<p>Test the join against <strong>trip_btree</strong> table. </p>
+<p><span style="color: red;">Answer question 3.4 in lab report.</span></p>
+<h2 id="finish-lab-report-2"><a class="header" href="#finish-lab-report-2">Finish Lab Report</a></h2>
+<p><span style="color: red;">Answer question 3.1 - 3.5 in lab report.</span></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="submit-guidance-1"><a class="header" href="#submit-guidance-1">Submit Guidance</a></h1>
+<p>Submit your lab report in <strong>PDF</strong> on Gradescope. </p>
+<p><strong>Only one</strong> submission is needed for group work. Please add all members while submitting on Gradescope. </p>
 
                     </main>
 
