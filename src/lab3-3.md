@@ -24,13 +24,13 @@ Test the join against the **trip** table.
 
 ## Test 2: Hash index
 
-Test the join against **trip_hash** table. 
+Test the join against the **trip_hash** table. 
 
 <span style="color: red;">Answer question 3.3 in lab report.</span>
 
 ## Test 3: B-tree index (clustered)
 
-Test the join against **trip_btree** table. 
+Test the join against the **trip_btree** table. 
 
 <span style="color: red;">Answer question 3.4 in lab report.</span>
 
